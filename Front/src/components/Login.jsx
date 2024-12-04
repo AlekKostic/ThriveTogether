@@ -32,29 +32,17 @@ const Login = () => {
       return;
     }
 
-    try {
-      const response = await axios.post('/login', {
-        username,
-        password,
+    axios({
+      method: "get",
+      url: `http://localhost:8080/api/users/login/${username}/${password}`,
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (response) {
+        console.log(response);
       });
-
-      console.log('Login successful:', response.data);
-
-      // Clear inputs after success
-      setUsername('');
-      setPassword('');
-
-      // Redirect or handle success (e.g., save token)
-    } catch (error) {
-      console.error('Login failed:', error.response?.data || error.message);
-
-      // Show error messages based on the error
-      if (error.response?.status === 401) {
-        setUsernameE('Invalid username or password.');
-      } else {
-        setUsernameE('An error occurred. Please try again.');
-      }
-    }
   };
 
   return (
@@ -86,6 +74,12 @@ const Login = () => {
           <button type="submit" className="submit-login">Submit</button>
         </div>
       </form>
+      <div className="log-upit">
+        <p >
+          Nemate nalog?{" "}
+          <a href="#">Kreirajte ga</a>
+        </p>
+      </div>
     </div>
   );
 };

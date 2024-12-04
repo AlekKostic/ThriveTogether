@@ -1,12 +1,11 @@
 import React from "react";
-import Login from "./components/Login";
-import ForumPostForm from "./components/ForumPostForm";
-
+import Loginpage from "./Pages/Loginpage";
+import Signinpage from "./Pages/Signinpage";
 const App = () => {
   return (
-    <div>
-      <Signup />
-    </div>
+    <>
+    <Loginpage />
+    </>
   );
 };
 

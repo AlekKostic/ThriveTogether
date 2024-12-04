@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const Signup = () => {
+
   useEffect(() => {
     document.body.classList.add("login-body");
     return () => {
@@ -44,15 +45,19 @@ const Signup = () => {
       headers: { "Content-Type": "application/json" },
     })
       .then(function (response) {
-        //handle success
+        // handle success
         console.log(response);
       })
       .catch(function (response) {
-        //handle error
+        // handle error
         console.log(response);
       });
   };
 
+  // Navigate to login page when clicking the link
+  const handleLoginRedirect = () => {
+    navigate("/login"); // Redirect to the login page
+  };
 
   return (
     <div className="forma">
@@ -117,6 +122,12 @@ const Signup = () => {
           </button>
         </div>
       </form>
+      <div className="log-upit">
+        <p >
+          Već imate nalog?{" "}
+          <a href="#">Ulogujte se</a>
+        </p>
+      </div>
     </div>
   );
 };

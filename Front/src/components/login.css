@@ -38,7 +38,6 @@
 
 .submit-login {
     margin-top: 0.5rem;
-    margin-bottom: 2rem;
     height: 40px;
     width: 100px;
     border: none;
@@ -163,4 +162,14 @@
         width: 80px;
         height: 35px;
     }
+}
+
+.log-upit{
+    margin-top:10px;
+    font-size:17px;
+    color: white
+}
+
+a{
+    color: blue;
 }
