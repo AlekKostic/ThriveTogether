@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-<<<<<<< HEAD
-import ForumPost from '../Components/ForumPost';
-=======
 import ForumPost from "../Components/ForumPost";
 import axios from "axios";
 
->>>>>>> 9945220ee188e6e595e52515fd014b42b076b56f
 const Forum = () => {
   const [posts, setPosts] = useState([]);
 
