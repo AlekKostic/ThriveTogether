@@ -1,4 +1,7 @@
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import "./uredjivanje.css"
+import { useNavigate } from 'react-router-dom'; // Importujte useNavigate
 
 const posts = [
   { user: 'Svetlana', text: 'Mazem venogel i to mi pomaze.' },
@@ -7,6 +10,7 @@ const posts = [
 ];
 
 const Component = () => {
+  
   const getCurrentDateTime = () => {
     const date = new Date();
     return date.toLocaleString();
@@ -16,20 +20,7 @@ const Component = () => {
     {/*<header className="container">
       <h1>Mentalno Zdravlje</h1>
     </header>*/}
-    <nav className="navbar">
-      <div className="navbar-left">
-        {/*<ul className="sidenav">*/}
-        <p id="#NazivSajta">MemoCare</p>
-        <a href="#forum">Forum</a>
-        <a href="#statistika">Statistika</a>
-        <a href="#kursevi">Kursevi</a>
-        {/*</ul>*/}
-      </div>
-      <div className="navbar-right">
-        <a href="#login">Login</a>
-        <a href="#signup">Signup</a>
-      </div>
-    </nav>
+    <Navbar />
     <div className="Hero">
         <div className="Hero-content">
             <h1>Uvod U Mentalno Zdravlje</h1>
@@ -46,16 +37,7 @@ const Component = () => {
           </div>
         ))}
       </div>
-    <footer className="footer">
-      <nav className="foot">
-        <div className="foot-left">
-            <p id="#MentalZ">Mentalno Zdravlje</p>
-        </div>
-        <div className="foot-right">
-            <a href="#Kontakt">Kontakt</a>
-        </div>
-      </nav>
-    </footer>
+    <Footer />
   </div>
   )
 }
