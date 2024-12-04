@@ -22,7 +22,6 @@ const App = () => {
         <Route path="/forum" element={<Forum />} />
         <Route path="/statistika" element={<Statistika />} />
         <Route path="/kursevi" element={<Kursevi />} />
-=======
       </Routes>
     </Router>
     </>
