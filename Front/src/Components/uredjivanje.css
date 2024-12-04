@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+/*}.glavni-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c6dad8;
+    color: #F8F3E7;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    padding: 10px 20px;
+}
+
+.navbar-left {
+    display: flex;
+    gap: 20px;
+    margin-left: 10px;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.navbar p {
+    text-decoration: none;
+    color: #1995AD;
+    font-size: 25px;
+    font-weight: bold;
+    border-color: #1995AD;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1995AD;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+  .navbar a:hover {
+    text-decoration: underline;
+}
+
+.Hero {
+    background-image: url('MZ.jpg');
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: #F1F1F2;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100vh
+}
+
+.Hero-content {
+    background: rgba(64, 64, 64, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .Hero h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .Hero p {
+    font-size: 3rem;
+    margin: 10px 0;
+  }
+
+  .Hero-button {
+    margin-top: 15px;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background-color: #c6dad8;
+    color: #F1F1F2;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .Hero-button:hover {
+    background-color: #A1D6E2;
+  }
+
+  .posts-section {
+    padding: 20px;
+    background-color: #F1F1F2;
+  }
+
+  .post {
+    background-color: #FFFFFF;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .post h3 {
+    margin: 0;
+    color: #1995AD;
+    font-size: 1.2rem;
+  }
+
+  .post p {
+    margin: 10px 0 0 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+ .footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background-color: #c6dad8;
+    color: #1995AD;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+ .footer p{
+    margin: 0;
+    font-size: 1rem;
+ }
+
+ div Kontakt :hover {
+    text-decoration: underline;
+}
+
+ .foot {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .foot-left {
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+ }
+
+ .foot-right {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+ }
