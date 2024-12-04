@@ -18,6 +18,7 @@ const Navbar = () => {
   const handleKurseviRedirect = () => {
     navigate('/kursevi');
   };
+  console.log(localStorage.getItem('userID'));
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -29,8 +30,16 @@ const Navbar = () => {
         {/*</ul>*/}
       </div>
       <div className="navbar-right">
-        <a onClick={handleLoginRedirect}>Login</a>
-        <a onClick={handleSigninRedirect}>Signup</a>
+      {
+      parseInt(localStorage.getItem('userID')) === -1 ? (
+        <>
+          <a onClick={handleLoginRedirect}>Login</a>
+          <a onClick={handleSigninRedirect}>Signup</a>
+        </>
+      ) : (
+        <span>aaa</span>
+      )
+    }
       </div>
     </nav>
   )

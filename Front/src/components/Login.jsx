@@ -37,11 +37,12 @@ const Login = () => {
       headers: { "Content-Type": "application/json" },
     })
       .then(function (response) {
+        localStorage.setItem('userID', response.id);
         console.log(response);
       })
       .catch(function (response) {
 
-        setpasswordE("Neispravna lozinka ili korisnicko ime.")
+        setPasswordE("Neispravna lozinka ili korisnicko ime.")
         console.log(response);
       });
   };

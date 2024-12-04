@@ -8,6 +8,10 @@ import Statistika from './Pages/Statistika';
 import Kursevi from './Pages/Kursevi';
 
 const App = () => {
+
+  if (localStorage.getItem('userID') === null)
+    localStorage.setItem('userID', 2);
+
   return (<>
     <Router>
       <Routes>
@@ -19,7 +23,6 @@ const App = () => {
         <Route path="/kursevi" element={<Kursevi />} />
       </Routes>
     </Router>
-      <ForumPostForm />
     </>
   );
 };
