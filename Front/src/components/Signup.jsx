@@ -1,6 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Signup = () => {
+
+  useEffect(() => {
+
+    document.body.classList.add('login-body');
+    return () => {
+      document.body.classList.remove('login-body');
+    };
+  }, []);
 
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
