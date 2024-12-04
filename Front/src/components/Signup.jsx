@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Signup = () => {
-
   useEffect(() => {
-
-    document.body.classList.add('login-body');
+    document.body.classList.add("login-body");
     return () => {
-      document.body.classList.remove('login-body');
+      document.body.classList.remove("login-body");
     };
   }, []);
 
@@ -20,20 +19,48 @@ const Signup = () => {
   const [passwordE, setPasswordE] = useState("");
   const [mailE, setMailE] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); 
-    console.log("Username:", username);
-    console.log("Password:", password);
-    console.log("Ime:", name);
-    console.log("Prezime:", surname);
-    console.log("Mejl:", mail);
-    setPassword("")
-    setUsername("")
-    setName("")
-    setSurname("")
-    setMail("")
+  const handleSubmit =  async(e) => {
+    e.preventDefault();
 
+    /*// Reset errors
+    setUsernameE("");
+    setPasswordE("");
+    setMailE("");
+
+    // Basic validation
+    if (!name || !surname || !username || !mail || !password) {
+      if (!username) setUsernameE("Please enter a username.");
+      if (!password) setPasswordE("Please enter a password.");
+      if (!mail) setMailE("Please enter a valid email.");
+      return;
+    }*/
+
+      const userData = { name, surname, mail, password, username };
+
+        try {
+            const response = await axios.post('http://192.168.14.217:8080/api/users', {
+              "username":"test",
+              "ime":"test",
+              "prezime": "prezime",
+              "email": "test@test.com",
+              "password": "jeuju"
+            }, {
+                headers: { 'Content-Type': 'application/json' },
+            });
+            console.log('Korisnik je uspešno kreiran:', response.data);
+        } catch (error) {
+            console.error('Greška prilikom kreiranja korisnika:', error.response ? error.response.data : error.message);
+        }
+      // Clear form fields
+      setName("");
+      setSurname("");
+      setUsername("");
+      setMail("");
+      setPassword("");
+
+      // Optionally, show a success message or redirect
   };
+
 
   return (
     <div className="forma">
@@ -91,8 +118,11 @@ const Signup = () => {
           />
           <div className="login-error">{passwordE}</div>
         </div>
+
         <div>
-          <button type="submit" className="submit-login">Submit</button>
+          <button type="submit" className="submit-login">
+            Submit
+          </button>
         </div>
       </form>
     </div>

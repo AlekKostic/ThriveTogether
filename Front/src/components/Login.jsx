@@ -1,37 +1,60 @@
-import React, { useState } from 'react';
-import './login.css'
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'; 
+import './login.css';
 
 const Login = () => {
-
   useEffect(() => {
-
     document.body.classList.add('login-body');
-
     return () => {
       document.body.classList.remove('login-body');
     };
   }, []);
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [usernameE, setUsernameE] = useState('');
+  const [passwordE, setPasswordE] = useState('');
 
-  const [usernameE, setUsernameE] = useState("");
-  const [passwordE, setPasswordE] = useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); 
-    console.log("Username:", username);
-    console.log("Password:", password);
-    setPassword("")
-    setUsername("")
+    // Reset errors
+    setUsernameE('');
+    setPasswordE('');
 
-    if(usernameE==="input-polja")
-    {
-        setUsernameE("login-error-polje");
+    // Validation
+    if (!username) {
+      setUsernameE('Please enter your email.');
+      return;
+    }
+    if (!password) {
+      setPasswordE('Please enter your password.');
+      return;
     }
 
+    try {
+      const response = await axios.post('/login', {
+        username,
+        password,
+      });
 
+      console.log('Login successful:', response.data);
+
+      // Clear inputs after success
+      setUsername('');
+      setPassword('');
+
+      // Redirect or handle success (e.g., save token)
+    } catch (error) {
+      console.error('Login failed:', error.response?.data || error.message);
+
+      // Show error messages based on the error
+      if (error.response?.status === 401) {
+        setUsernameE('Invalid username or password.');
+      } else {
+        setUsernameE('An error occurred. Please try again.');
+      }
+    }
   };
 
   return (
