@@ -1,0 +1,58 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;  
+}
+  
+.forma {
+    background-color: gray;   
+    padding: 20px 50px;     
+    border-radius: 12px;       
+    align-items: center;       
+    text-align: center;       
+    box-sizing: border-box;   
+    width: 350px;             
+}
+  
+.naslovforme {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;       
+    color: white;       
+}
+  
+.input-polja {
+    border-radius: 10px;      
+    border: none;                
+    height: 40px;             
+    width: 100%;                
+    margin-bottom: 10px;         
+    padding: 10px;             
+    font-size: 16px;            
+    box-sizing: border-box;     
+}
+  
+  
+.submit-login {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    height: 40px;        
+    width: 100px;          
+    border: none;            
+    border-radius: 10px;       
+    font-size: 16px;     
+    cursor: pointer;  
+}
+
+.login-error {
+    color: red;          
+    font-size: 14px;   
+    margin-bottom: 10px;    
+    text-align: center;  
+}
+
+
+  
