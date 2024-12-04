@@ -253,5 +253,18 @@ hr{
     background-color: orange;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
+.forum-container, .kursevi-container, .statistika-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensure the container spans the full viewport height */
+}
+
+.footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+}
+
 
 

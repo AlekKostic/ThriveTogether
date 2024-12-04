@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import ForumPost from '../Components/ForumPost';
-
 const Forum = () => {
   const posts = [
     { index:1, user: 'Svetlana', text: 'Mazem venogel i to mi pomaze.' },
@@ -13,6 +12,7 @@ const Forum = () => {
   return (
     <div className="forum-container">
       <Navbar />
+
       <h2>Mentalno zdravlje</h2>
       <p>Pitanja i odgovori koje ljudi postavljaju</p>
 
