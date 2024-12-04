@@ -6,12 +6,6 @@ import { useNavigate } from 'react-router-dom'; // Importujte useNavigate
 const Login = () => {
 
   const navigate = useNavigate(); // Inicijalizujte useNavigate
-  useEffect(() => {
-    document.body.classList.add('login-body');
-    return () => {
-      document.body.classList.remove('login-body');
-    };
-  }, []);
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

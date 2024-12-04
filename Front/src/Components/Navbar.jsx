@@ -9,17 +9,23 @@ const Navbar = () => {
   const handleSigninRedirect = () => {
     navigate("/signup"); // Ovaj kod preusmerava na login stranicu
   };
-  const handleLogo = () => {
-    navigate("/"); // Ovaj kod preusmerava na main stranicu
+  const handleForumRedirect = () => {
+    navigate('/forum');
+  };
+  const handleStatistikaRedirect = () => {
+    navigate('/statistika');
+  };
+  const handleKurseviRedirect = () => {
+    navigate('/kursevi');
   };
   return (
     <nav className="navbar">
       <div className="navbar-left">
         {/*<ul className="sidenav">*/}
-        <p id="#NazivSajta" onClick={handleLogo}>MemoCare</p>
-        <a href="#forum">Forum</a>
-        <a href="#statistika">Statistika</a>
-        <a href="#kursevi">Kursevi</a>
+        <p id="#NazivSajta">MemoCare</p>
+        <a href="#forum" onClick={handleForumRedirect}>Forum</a>
+        <a href="#statistika" onClick={handleStatistikaRedirect}>Statistika</a>
+        <a href="#kursevi" onClick={handleKurseviRedirect}>Kursevi</a>
         {/*</ul>*/}
       </div>
       <div className="navbar-right">

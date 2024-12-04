@@ -104,48 +104,6 @@
     margin: 10px 0;
   }
 
-  .Hero-button {
-    margin-top: 15px;
-    padding: 15px 40px;
-    font-size: 1rem;
-    background-color: #c6dad8;
-    color: #F1F1F2;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-
-  .Hero-button:hover {
-    background-color: #A1D6E2;
-  }
-
-  .posts-section {
-    padding: 20px;
-    background-color: #F1F1F2;
-  }
-
-  .post {
-    background-color: #FFFFFF;
-    margin: 10px 0;
-    padding: 15px;
-    border: 1px solid #DDD;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .post h3 {
-    margin: 0;
-    color: #1995AD;
-    font-size: 1.2rem;
-  }
-
-  .post p {
-    margin: 10px 0 0 0;
-    color: #333;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
  .footer {
     margin-top: auto;
     width: 100%;

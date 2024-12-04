@@ -2,22 +2,31 @@ import React, { useEffect,  useState } from 'react'
 import './login.css'
 
 const ForumPostForm = () => {
-  useEffect(() => {
-    document.body.classList.add('login-body');
-    return () => {
-      document.body.classList.remove('login-body');
-    };
-  }, []);
+  
 
   const [tekst, setTekst] = useState("")
+  const [tekstE, setTekstE] = useState("")
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Tekst:', tekst);
+    
+    if(!tekst)
+    {
+      setTekstE("Unesite pitanje.")
+    }else{
+      setTekstE("");
+    }
+  };
+
 
   return (
+    <div className="sve">
     <div className="forum-post-form">
       <div className="naslov-posta">
         <p>Nova objava</p>
       </div>
-
-      <form>
+      <form onSubmit={handleSubmit}>
       <div>
           <input
             value={tekst}
@@ -26,11 +35,13 @@ const ForumPostForm = () => {
             className="input-post"
           />
         </div>
+        <div className="login-error">{tekstE}</div>
 
         <div className="post-submit-dugme-div"> 
           <button type="submit" className="post-submit-dugme">Objavi</button>
         </div>
       </form>
+    </div>
     </div>
   )
 }
