@@ -101,6 +101,7 @@ const Signup = () => {
   };
 
   return (
+    <div className="sve">
     <div className="forma">
       <div className="naslovforme">
         <p>Sign up</p>
@@ -169,6 +170,7 @@ const Signup = () => {
           <a onClick={handleLoginRedirect}>Ulogujte se</a> {/* Link koji preusmerava na login */}
         </p>
       </div>
+    </div>
     </div>
   );
 };

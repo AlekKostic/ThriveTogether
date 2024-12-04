@@ -24,14 +24,18 @@ const Login = () => {
     setUsernameE('');
     setPasswordE('');
 
+    let isValid = true;
+
     if (!username) {
       setUsernameE('Please enter your email.');
-      return;
+      isValid = false;
     }
     if (!password) {
       setPasswordE('Please enter your password.');
-      return;
+      isValid = false;
     }
+
+    if(!isValid)return;
 
     axios({
       method: "get",
@@ -53,6 +57,7 @@ const Login = () => {
   };
 
   return (
+    <div className="sve">
     <div className="forma">
       <div className="naslovforme">
         <p>Login</p>
@@ -87,6 +92,7 @@ const Login = () => {
           <a onClick={handleLoginRedirect}>Kreirajte ga</a>
         </p>
       </div>
+    </div>
     </div>
   );
 };
