@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
 import './login.css'
+import { useEffect } from 'react';
 
 const Login = () => {
+
+  useEffect(() => {
+
+    document.body.classList.add('login-body');
+
+    return () => {
+      document.body.classList.remove('login-body');
+    };
+  }, []);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
