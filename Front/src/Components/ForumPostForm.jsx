@@ -13,7 +13,7 @@ const ForumPostForm = () => {
     
     if(!tekst)
     {
-      setTekstE("Unesite pitanje.")
+      setTekstE("Unesite sadrzaj.")
     }else{
       setTekstE("");
     }
