@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
 import './login.css';
+import { useNavigate } from 'react-router-dom'; // Importujte useNavigate
 
 const Login = () => {
+
+  const navigate = useNavigate(); // Inicijalizujte useNavigate
   useEffect(() => {
     document.body.classList.add('login-body');
     return () => {
@@ -18,11 +21,9 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Reset errors
     setUsernameE('');
     setPasswordE('');
 
-    // Validation
     if (!username) {
       setUsernameE('Please enter your email.');
       return;
@@ -41,8 +42,14 @@ const Login = () => {
         console.log(response);
       })
       .catch(function (response) {
+
+        setpasswordE("Neispravna lozinka ili korisnicko ime.")
         console.log(response);
       });
+  };
+
+  const handleLoginRedirect = () => {
+    navigate("/signup"); // Ovaj kod preusmerava na login stranicu
   };
 
   return (
@@ -77,7 +84,7 @@ const Login = () => {
       <div className="log-upit">
         <p >
           Nemate nalog?{" "}
-          <a href="#">Kreirajte ga</a>
+          <a onClick={handleLoginRedirect}>Kreirajte ga</a>
         </p>
       </div>
     </div>

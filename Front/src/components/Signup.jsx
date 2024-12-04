@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom'; // Importujte useNavigate
 
 const Signup = () => {
+  const navigate = useNavigate(); // Inicijalizujte useNavigate
 
   useEffect(() => {
     document.body.classList.add("login-body");
@@ -16,22 +18,61 @@ const Signup = () => {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [nameE, setNameE] = useState("");
+  const [surnameE, setSurnameE] = useState("");
   const [usernameE, setUsernameE] = useState("");
   const [passwordE, setPasswordE] = useState("");
   const [mailE, setMailE] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Username:", username);
-    console.log("Password:", password);
-    console.log("Ime:", name);
-    console.log("Prezime:", surname);
-    console.log("Mejl:", mail);
+
+    setUsernameE("");
+    setPasswordE("");
+    setMailE("");
+    setNameE("");
+    setSurnameE("");
+
+    let isValid = true;
+
+    // Validate fields
+    if (!username) {
+      setUsernameE("Username is required.");
+      isValid = false;
+    }
+
+    if (!password) {
+      setPasswordE("Password is required.");
+      isValid = false;
+    }
+
+    if (!mail) {
+      setMailE("Email is required.");
+      isValid = false;
+    }
+
+    if (!name) {
+      setNameE("Name is required.");
+      isValid = false;
+    }
+
+    if (!surname) {
+      setSurnameE("Surname is required.");
+      isValid = false;
+    }
+
+    if (!isValid) {
+      return; 
+    }
+
+    // Clear form
     setPassword("");
     setUsername("");
     setName("");
     setSurname("");
     setMail("");
+
+    // Make API request if validation passed
     axios({
       method: "post",
       url: "http://localhost:8080/api/users",
@@ -45,18 +86,18 @@ const Signup = () => {
       headers: { "Content-Type": "application/json" },
     })
       .then(function (response) {
-        // handle success
+        // Handle success
         console.log(response);
       })
       .catch(function (response) {
-        // handle error
+        // Handle error
         console.log(response);
       });
   };
 
-  // Navigate to login page when clicking the link
+  // Navigacija na Login stranicu
   const handleLoginRedirect = () => {
-    navigate("/login"); // Redirect to the login page
+    navigate("/login"); // Ovaj kod preusmerava na login stranicu
   };
 
   return (
@@ -72,7 +113,7 @@ const Signup = () => {
             onChange={(e) => setName(e.target.value)}
             className="input-polja"
           />
-          <div className="login-error"></div>
+          <div className="login-error">{nameE}</div>
         </div>
 
         <div>
@@ -82,7 +123,7 @@ const Signup = () => {
             onChange={(e) => setSurname(e.target.value)}
             className="input-polja"
           />
-          <div className="login-error"></div>
+          <div className="login-error">{surnameE}</div>
         </div>
 
         <div>
@@ -123,9 +164,9 @@ const Signup = () => {
         </div>
       </form>
       <div className="log-upit">
-        <p >
+        <p>
           Već imate nalog?{" "}
-          <a href="#">Ulogujte se</a>
+          <a onClick={handleLoginRedirect}>Ulogujte se</a> {/* Link koji preusmerava na login */}
         </p>
       </div>
     </div>
