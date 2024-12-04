@@ -1,14 +1,14 @@
-import React from 'react'
-import Login from './components/Login'
-import Signup from './components/Signup'
-import ForumPostForm from './components/ForumPostForm'
+import React from "react";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import ForumPostForm from "./components/ForumPostForm";
 
 const App = () => {
   return (
     <div>
-      <ForumPostForm />
+      <Signup />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

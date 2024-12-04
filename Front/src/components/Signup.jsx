@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Signup = () => {
-
   useEffect(() => {
-
-    document.body.classList.add('login-body');
+    document.body.classList.add("login-body");
     return () => {
-      document.body.classList.remove('login-body');
+      document.body.classList.remove("login-body");
     };
   }, []);
 
@@ -21,18 +20,37 @@ const Signup = () => {
   const [mailE, setMailE] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     console.log("Username:", username);
     console.log("Password:", password);
     console.log("Ime:", name);
     console.log("Prezime:", surname);
     console.log("Mejl:", mail);
-    setPassword("")
-    setUsername("")
-    setName("")
-    setSurname("")
-    setMail("")
-
+    setPassword("");
+    setUsername("");
+    setName("");
+    setSurname("");
+    setMail("");
+    axios({
+      method: "post",
+      url: "http://localhost:8080/api/users",
+      data: {
+        username: username,
+        ime: name,
+        prezime: surname,
+        email: mail,
+        password: password,
+      },
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(function (response) {
+        //handle success
+        console.log(response);
+      })
+      .catch(function (response) {
+        //handle error
+        console.log(response);
+      });
   };
 
   return (
@@ -92,7 +110,9 @@ const Signup = () => {
           <div className="login-error">{passwordE}</div>
         </div>
         <div>
-          <button type="submit" className="submit-login">Submit</button>
+          <button type="submit" className="submit-login">
+            Submit
+          </button>
         </div>
       </form>
     </div>
