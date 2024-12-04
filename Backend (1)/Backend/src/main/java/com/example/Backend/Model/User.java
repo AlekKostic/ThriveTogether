@@ -3,6 +3,8 @@ package com.example.Backend.Model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Table(name = "User")
 @Entity
 public class User {
@@ -63,4 +65,5 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
+
 }

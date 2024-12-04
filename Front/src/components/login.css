@@ -55,23 +55,30 @@
     color: red;
     font-size: 0.875rem;
     margin-bottom: 0.5rem;
+    margin-top: 5px;
     text-align: center;
 }
 
-.forum-post-form {
+.forum-post-form, .forum-emo-form {
     background-color: gray;
     padding: 2rem 3rem;
     border-radius: 12px;
     text-align: center;
     box-sizing: border-box;
-    width: 700px;
+    
     max-width: 90%; /* Ensures responsiveness */
     margin: 0 auto;
 }
 
-.input-post {
+.forum-post-form{
+    width: 700px;
+}
+.forum-emo-form{
+    width: 500px;
+}
+
+.input-post, .input-post-emo {
     width: 100%;
-    height: 400px;
     position: relative;
     padding: 10px;
     font-size: 1rem;
@@ -80,6 +87,16 @@
     box-sizing: border-box;
     vertical-align: top;
     text-align: left;
+}
+
+.input-post{
+    
+    height: 400px;
+}
+
+.input-post-emo{
+    
+    height: 250px;
 }
 
 .input-post::placeholder {
@@ -175,3 +192,25 @@ a{
     text-decoration: underline;
     cursor: pointer;
 }
+.emotion-selection{
+    margin-top: 0px;
+    margin-bottom: 15px;
+    color: white;
+    font-size:20px;
+    align-items: left;
+}
+.dugme{
+    margin-right:15px;
+    display: inline-flex;
+  align-items: center;
+}
+
+hr{
+    margin-bottom: 10px;
+}
+
+.error-emo{
+
+}
+
+
