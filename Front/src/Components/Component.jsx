@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import "./uredjivanje.css"
 import { useNavigate } from 'react-router-dom'; // Importujte useNavigate
 
@@ -36,16 +37,7 @@ const Component = () => {
           </div>
         ))}
       </div>
-    <footer className="footer">
-      <nav className="foot">
-        <div className="foot-left">
-            <p id="#MentalZ">Mentalno Zdravlje</p>
-        </div>
-        <div className="foot-right">
-            <a href="#Kontakt">Kontakt</a>
-        </div>
-      </nav>
-    </footer>
+    <Footer />
   </div>
   )
 }
