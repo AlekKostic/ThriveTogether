@@ -30,4 +30,27 @@ public class PitanjaService {
         pitanja.setUser(user);
         return pitanjaRepository.save(pitanja);
     }
+
+    public List<Pitanja> getAllPitanjaDashboar(Long id){
+        List<Pitanja> pitanje = pitanjaRepository.getAllByUser_Id(id);
+        return pitanje;
+    }
+    public Pitanja updatePitanja(Long pitanjaId, String novihead, Long userId) {
+
+        Pitanja pitanje = pitanjaRepository.findById(pitanjaId)
+                .orElseThrow(() -> new RuntimeException("Order not found"));
+
+
+        pitanje.setHead(novihead);
+
+
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+
+        pitanje.setUser(user);
+
+
+        return pitanjaRepository.save(pitanje);
+    }
 }

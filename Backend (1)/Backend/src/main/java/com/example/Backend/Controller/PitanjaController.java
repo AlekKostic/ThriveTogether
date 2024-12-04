@@ -25,4 +25,16 @@ public class PitanjaController {
     public Pitanja createPitanja(@RequestBody PitanjeDTO pitanjeDTO){
         return pitanjaService.createPitanje(pitanjeDTO);
     }
+    @GetMapping("/dashboard/{id}")
+    public List<Pitanja> getAllPitanjaDashboar(@PathVariable(name = "id") Long id){
+        return pitanjaService.getAllPitanjaDashboar(id);
+    }
+    @PutMapping("/{pitanjaId}")
+    public Pitanja updateOrder(
+            @PathVariable Long pitanjaId,
+            @RequestParam String novihead,
+            @RequestParam Long userId) {
+        return pitanjaService.updatePitanja(pitanjaId, novihead, userId);
+    }
+
 }
