@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+<<<<<<< HEAD
 import ForumPost from '../Components/ForumPost';
+=======
+import ForumPost from "../Components/ForumPost";
+import axios from "axios";
+
+>>>>>>> 9945220ee188e6e595e52515fd014b42b076b56f
 const Forum = () => {
-  const posts = [
-    { index:1, user: 'Svetlana', text: 'Mazem venogel i to mi pomaze.' },
-    { index:2, user: 'Zorica', text: 'Ja popijem caj od zove i brusnicu i resi sve moje probleme.' },
-    { index:3, user: 'Ruška', text: 'Stari su govorili oduvek. Rakija je zakon za sve.' },
-  ];
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: "http://localhost:8080/api/pitanja",
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(function (response) {
+        setPosts(response.data);
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <div className="forum-container">
@@ -17,7 +34,7 @@ const Forum = () => {
       <p>Pitanja i odgovori koje ljudi postavljaju</p>
 
       {posts.map((post) => (
-        <ForumPost key={post.index} post={post} />
+        <ForumPost key={post.id_pitanja} post={post} />
       ))}
 
       <Footer />
