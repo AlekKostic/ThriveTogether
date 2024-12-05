@@ -23,7 +23,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-left">
         {/*<ul className="sidenav">*/}
-        <p id="#NazivSajta">MemoCare</p>
+        <a href='/'>Home</a>
         <a href="#forum" onClick={handleForumRedirect}>Forum</a>
         <a href="#statistika" onClick={handleStatistikaRedirect}>Statistika</a>
         <a href="#kursevi" onClick={handleKurseviRedirect}>Kursevi</a>

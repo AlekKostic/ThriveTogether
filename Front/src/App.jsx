@@ -9,8 +9,7 @@ import Kursevi from './Pages/Kursevi';
 
 const App = () => {
 
-  if (localStorage.getItem('userID') === null)
-    localStorage.setItem('userID', 2);
+    localStorage.setItem('userID', -1);
 
   return (<>
     <Router>
