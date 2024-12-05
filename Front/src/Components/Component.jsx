@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import "./uredjivanje.css"
-import { useNavigate } from 'react-router-dom'; // Importujte useNavigate
+import "./uredjivanje.css";
+import { useNavigate } from "react-router-dom"; // Importujte useNavigate
 import Hero from "./Hero";
 /*
 const posts = [
@@ -19,31 +19,29 @@ const Component = () => {
   */
   return (
     <div className="glavni-container">
-    {/*<header className="container">
+      {/*<header className="container">
       <h1>Mentalno Zdravlje</h1>
     </header>*/}
-    <Navbar />
-    <Hero />
-    <article className="Mentalno-zdravlje">
-    <div className="bold-text">Tekst1</div>
-      <div className="text-section">
-        <div className="text-box">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Assumenda eum explicabo velit, perferendis enim sit dolores! 
-          Molestiae voluptatum nesciunt, laudantium suscipit similique 
-          asperiores doloribus magni quis aperiam, incidunt aut excepturi!
+      <Navbar />
+      <Hero />
+      <article className="Mentalno-zdravlje">
+        <div className="bold-text">ThriveTogether</div>
+        <div className="text-section">
+          <div className="text-box">
+            ThriveTogether nudi prostor gde mozete postavljati pitanja i
+            dobijati odgovore od drugih kosrinsika, sluzi za deljenje iskustava,
+            saveta i skolskih pitanja, bez straha od osude.
           </div>
-        <div className="text-box">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Assumenda eum explicabo velit, perferendis enim sit dolores! 
-          Molestiae voluptatum nesciunt, laudantium suscipit similique 
-          asperiores doloribus magni quis aperiam, incidunt aut excepturi!</div>
-        <div className="text-box">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Assumenda eum explicabo velit, perferendis enim sit dolores! 
-          Molestiae voluptatum nesciunt, laudantium suscipit similique 
-          asperiores doloribus magni quis aperiam, incidunt aut excepturi!</div>
-      </div>
+          <div className="text-box">
+            ThriveTogether nudi prostor gde mozete beleziti svoje emocije i
+            pratiti sopstveno mentalno stanje kroz personalizovane grafike.
+          </div>
+          <div className="text-box">
+            ThriveTogether nudi prostor ispunjen raznim besplatnim kursevima iz
+            oblasti informatike, marketinga i slicno. Ovde mozete pronaci
+            inspiraciju za unapredjenje svog znanja.
+          </div>
+        </div>
         {/*{posts.map((post, index) => (
           <div className="post" key={index}>
             <h3>{post.user}</h3>
@@ -53,9 +51,9 @@ const Component = () => {
         ))}
           */}
       </article>
-    <Footer />
-  </div>
-  )
-}
+      <Footer />
+    </div>
+  );
+};
 
-export default Component
+export default Component;

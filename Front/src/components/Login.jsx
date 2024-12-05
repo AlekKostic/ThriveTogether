@@ -15,8 +15,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    localStorage.setItem("userID", 1);
-
     setUsernameE("");
     setPasswordE("");
 
@@ -46,6 +44,7 @@ const Login = () => {
       })
       .catch(function (response) {
         setPasswordE("Neispravna lozinka ili korisnicko ime.");
+        navigate("/");
         console.log(response);
       });
   };

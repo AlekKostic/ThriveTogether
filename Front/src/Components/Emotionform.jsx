@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import './login.css';
+import React, { useEffect, useState } from "react";
+import "./login.css";
 import { IoMdHappy } from "react-icons/io";
 import { FaRegSadTear } from "react-icons/fa";
 import { MdOutlineSentimentNeutral } from "react-icons/md";
+import axios from "axios";
 
 const Emotionform = ({ closeModal }) => {
   const [tekst, setTekst] = useState("");
   const [emotion, setEmotion] = useState(""); // Track the selected emotion
 
-  const [emotionE, setEmotionE]=useState("");
+  const [emotionE, setEmotionE] = useState("");
 
   const handleEmotionChange = (e) => {
     setEmotion(e.target.value);
@@ -16,15 +17,35 @@ const Emotionform = ({ closeModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Tekst:', tekst);
-    console.log('Emotion:', emotion);
-    
-    if(!emotion)
-    {
-      setEmotionE("Obavezno je obeleziti osecanje.")
-    }else{
+    if (!emotion) {
+      setEmotionE("Obavezno je obeleziti osecanje.");
+      return;
+    } else {
       setEmotionE("");
     }
+    axios({
+      method: "post",
+      url: "http://localhost:8080/api/raspolozenja/create",
+      data: {
+        raspolozenje: emotion,
+        datum: null,
+        beleske: tekst,
+        userId: localStorage.getItem("userID"),
+      },
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(function (response) {
+        // Handle success
+        closeModal();
+        window.location.reload();
+
+        console.log(response);
+      })
+      .catch(function (response) {
+        // Handle error
+        closeModal();
+        console.log(response);
+      });
   };
 
   return (
@@ -33,7 +54,7 @@ const Emotionform = ({ closeModal }) => {
         <div className="naslov-posta">
           <p>Kako ste se danas osecali?</p>
         </div>
-      <hr></hr>
+        <hr></hr>
         <form onSubmit={handleSubmit}>
           {/* Emotion Radio Buttons */}
           <div className="emotion-selection">
@@ -81,9 +102,17 @@ const Emotionform = ({ closeModal }) => {
           </div>
 
           {/* Submit Button */}
-          <div className="post-submit-dugme-div"> 
-            <button type="submit" className="post-cancel-dugme" onClick={closeModal}>Odustani</button>
-            <button type="submit" className="post-submit-dugme">Zabelezi</button>
+          <div className="post-submit-dugme-div">
+            <button
+              type="submit"
+              className="post-cancel-dugme"
+              onClick={closeModal}
+            >
+              Odustani
+            </button>
+            <button type="submit" className="post-submit-dugme">
+              Zabelezi
+            </button>
           </div>
         </form>
       </div>

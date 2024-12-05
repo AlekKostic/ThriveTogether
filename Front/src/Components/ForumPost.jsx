@@ -4,7 +4,6 @@ import { FaAngleDown } from "react-icons/fa";
 
 import Reply from "./Reply";
 import axios from "axios";
-import { data } from "react-router-dom";
 
 const ForumPost = ({ post }) => {
   const [odg, setOdg] = useState([]);
@@ -28,6 +27,7 @@ const ForumPost = ({ post }) => {
   };
 
   const handleNew = () => {
+    setShowComments(true);
     axios({
       method: "post",
       url: "http://localhost:8080/api/odgovori/create",

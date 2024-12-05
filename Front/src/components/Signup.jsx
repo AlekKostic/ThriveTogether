@@ -82,10 +82,12 @@ const Signup = () => {
       headers: { "Content-Type": "application/json" },
     })
       .then(function (response) {
+        navigate("/login");
         // Handle success
         console.log(response);
       })
       .catch(function (response) {
+        navigate("/");
         // Handle error
         console.log(response);
       });
@@ -103,7 +105,7 @@ const Signup = () => {
 
   return (
     <>
-      {showForm && (  // Conditionally render the form if showForm is true
+      {showForm && ( // Conditionally render the form if showForm is true
         <div className="sve">
           <div className="sve">
             <div className="forma">

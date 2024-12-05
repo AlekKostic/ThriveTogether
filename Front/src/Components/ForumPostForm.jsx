@@ -11,12 +11,13 @@ const ForumPostForm = ({ closeModal, user_id }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     let isValid = true;
     if (!tekst) {
       setTekstE("Unesite tekst.");
       return;
     } else setTekstE("");
+
+    closeModal();
 
     axios({
       method: "post",
@@ -32,8 +33,10 @@ const ForumPostForm = ({ closeModal, user_id }) => {
         console.log(response);
       })
       .catch(function (response) {
+        navigate("/forum");
         console.log(response);
       });
+    window.location.reload(); // Refreshes the page
   };
 
   return (

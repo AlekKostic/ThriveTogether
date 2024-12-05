@@ -353,6 +353,7 @@ hr {
 }
 .postavi-objavi2 {
   margin: auto;
+  margin-top: 50px;
 }
 
 .postt {
@@ -632,4 +633,130 @@ hr {
 /* Hover effect for button inside dropdown */
 .dropdown-item button:hover {
   background-color: rgb(97, 170, 101);
+}
+
+.quote {
+  margin-top: 50px; /* Povećano razmak između citata i vrha */
+  font-size: 50px; /* Veliki font za citat */
+  font-family: "Georgia", serif; /* Elegantan font */
+  text-align: center; /* Poravnanje teksta u centru */
+  margin-bottom: 50px; /* Manji razmak ispod citata */
+  color: #457d99; /* Prijatna plava boja teksta */
+  font-weight: 700; /* Povećana debljina fonta za bold efekat */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Senka teksta za dubinu */
+  line-height: 1.5; /* Razmak između redova */
+  letter-spacing: 1px; /* Razmak između slova */
+  max-width: 80%; /* Ograničen širina citata */
+  margin-left: auto; /* Centriranje citata sa leve strane */
+  margin-right: auto; /* Centriranje citata sa desne strane */
+  padding: 20px; /* Unutrašnji razmak oko citata */
+  border-radius: 10px; /* Zaobljeni ivice */
+  background-color: rgba(255, 255, 255, 0.8); /* Poluprovidna pozadina */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Blagi senka oko citata */
+  transition: all 0.3s ease; /* Animacija za sve promene */
+}
+
+.quote:hover {
+  color: #5095b7; /* Promena boje na narandžasto prilikom hover efekta */
+  transform: scale(1.05); /* Lagano povećanje citata */
+}
+
+.aaaalo {
+  margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .forma {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .forum-post-form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .input-post {
+    height: 300px;
+  }
+
+  .post-submit-dugme {
+    width: 90px;
+  }
+
+  .search-input {
+    width: 200px;
+  }
+
+  .search-button {
+    padding: 8px 16px;
+  }
+
+  .course-item {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .postt {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forma {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .forum-post-form {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .input-post {
+    height: 200px;
+  }
+
+  .post-submit-dugme {
+    width: 80px;
+    height: 35px;
+  }
+
+  .search-input {
+    width: 150px;
+  }
+
+  .search-button {
+    padding: 6px 12px;
+  }
+
+  .course-item {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .postt {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .input-post {
+    height: 180px;
+  }
+
+  .input-post-emo {
+    height: 200px;
+  }
+
+  .course-item {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .postt {
+    width: 100%;
+    padding: 10px;
+  }
 }
