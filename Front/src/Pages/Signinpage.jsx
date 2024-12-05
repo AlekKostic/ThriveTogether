@@ -1,7 +1,7 @@
-import React from 'react'
-import Signup from '../Components/Signup'
-import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
+import React from "react";
+import Signup from "../components/Signup";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Signinpage = () => {
   return (
@@ -9,7 +9,7 @@ const Signinpage = () => {
       <Navbar />
       <Signup />
     </div>
-  )
-}
+  );
+};
 
-export default Signinpage
+export default Signinpage;

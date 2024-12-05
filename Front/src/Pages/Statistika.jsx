@@ -15,7 +15,6 @@ import {
   Legend,
 } from "chart.js";
 
-// Register necessary chart components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -28,11 +27,8 @@ ChartJS.register(
 const Statistika = () => {
   const navigate = useNavigate();
 
-  // State to hold the emotion data
   const [osecanja, setOsecanja] = useState([]);
-  const [isModalOpen, setModalOpen] = useState(false); // State to control popup visibility
-
-  // Fetch emotion data when the component mounts
+  const [isModalOpen, setModalOpen] = useState(false);
   useEffect(() => {
     axios({
       method: "get",
@@ -42,35 +38,32 @@ const Statistika = () => {
       headers: { "Content-Type": "application/json" },
     })
       .then(function (response) {
-        setOsecanja(response.data); // Set the response data into the state
+        setOsecanja(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
-  }, []); // Empty array ensures it runs only once on mount
-
-  // Process the emotion data to count how many times each emotion appears
+  }, []);
   const emotionCounts = osecanja.reduce((acc, item) => {
     acc[item.raspolozenje] = (acc[item.raspolozenje] || 0) + 1;
     return acc;
   }, {});
 
-  // Prepare data for the chart
   const chartData = {
-    labels: Object.keys(emotionCounts), // Emotion labels (e.g., sad, happy)
+    labels: Object.keys(emotionCounts),
     datasets: [
       {
         label: "Emotion Count",
-        data: Object.values(emotionCounts), // Number of times each emotion appears
+        data: Object.values(emotionCounts),
         backgroundColor: [
-          "rgba(255, 99, 132, 0.2)", // red for sad
-          "rgba(54, 162, 235, 0.2)", // blue for happy
-          "rgba(255, 159, 64, 0.2)", // orange for neutral, etc.
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(255, 159, 64, 0.2)",
         ],
         borderColor: [
-          "rgba(255, 99, 132, 1)", // red for sad
-          "rgba(54, 162, 235, 1)", // blue for happy
-          "rgba(255, 159, 64, 1)", // orange for neutral, etc.
+          "rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(255, 159, 64, 1)",
         ],
         borderWidth: 1,
       },
@@ -82,11 +75,11 @@ const Statistika = () => {
       navigate("/login");
       return;
     }
-    setModalOpen(true); // Open the modal when the button is clicked
+    setModalOpen(true);
   };
 
   const closeModal = () => {
-    setModalOpen(false); // Close the modal when called
+    setModalOpen(false);
   };
 
   const quotes = [
@@ -121,17 +114,14 @@ const Statistika = () => {
           </button>
         </div>
 
-        {/* Render the Emotion Form if the modal is open */}
         {isModalOpen && <Emotionform closeModal={closeModal} />}
 
-        {/* Display the quote */}
         <div className="quote-section">
           <p className="quote">
             {quotes[Math.floor(Math.random() * quotes.length)]}
           </p>
         </div>
 
-        {/* Render the emotion chart */}
         {parseInt(localStorage.getItem("userID") != -1) && (
           <div className="emotion-chart">
             <Bar

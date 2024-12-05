@@ -6,13 +6,13 @@ import Home from "./Pages/Home";
 import Forum from "./Pages/Forum";
 import Statistika from "./Pages/Statistika";
 import Kursevi from "./Pages/Kursevi";
-import ForumPostForm from "./Components/ForumPostForm";
-import Signup from "./Components/Signup";
+import ForumPostForm from "./components/ForumPostForm";
+import Signup from "./components/Signup";
 
 const App = () => {
-  if (localStorage.getItem('userID')===null){
-   localStorage.setItem("userID", 1);
-   localStorage.setItem("username", "hakaton");
+  if (localStorage.getItem("userID") === null) {
+    localStorage.setItem("userID", 1);
+    localStorage.setItem("username", "hakaton");
   }
   return (
     <>

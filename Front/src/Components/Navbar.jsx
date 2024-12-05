@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
 
-  // State initialization from localStorage or default values
   const [userID, setUserID] = useState(() => {
     return localStorage.getItem("userID")
       ? parseInt(localStorage.getItem("userID"))
@@ -16,8 +15,8 @@ const Navbar = () => {
     return localStorage.getItem("username") || "hakaton";
   });
 
-  const [showMenu, setShowMenu] = useState(false); // State to show/hide the dropdown menu
-  const [newUsername, setNewUsername] = useState(""); // State for updating username
+  const [showMenu, setShowMenu] = useState(false);
+  const [newUsername, setNewUsername] = useState("");
   const [newUsernameE, setNewUsernameE] = useState("");
   useEffect(() => {
     const handleStorageChange = () => {

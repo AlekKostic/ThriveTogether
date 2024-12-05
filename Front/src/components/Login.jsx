@@ -50,11 +50,11 @@ const Login = () => {
   };
 
   const handleLoginRedirect = () => {
-    navigate("/signup"); // Ovaj kod preusmerava na login stranicu
+    navigate("/signup");
   };
 
   const handleClose = () => {
-    navigate("/"); // Ovaj kod preusmerava na login stranicu
+    navigate("/");
   };
 
   return (

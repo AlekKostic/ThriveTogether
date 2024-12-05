@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import { IoIosClose } from "react-icons/io";
 
 const Signup = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
@@ -18,7 +18,7 @@ const Signup = () => {
   const [passwordE, setPasswordE] = useState("");
   const [mailE, setMailE] = useState("");
 
-  const [showForm, setShowForm] = useState(true); // State to control the visibility of the pop-up
+  const [showForm, setShowForm] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +31,6 @@ const Signup = () => {
 
     let isValid = true;
 
-    // Validate fields
     if (!username) {
       setUsernameE("Username is required.");
       isValid = false;
@@ -61,14 +60,12 @@ const Signup = () => {
       return;
     }
 
-    // Clear form
     setPassword("");
     setUsername("");
     setName("");
     setSurname("");
     setMail("");
 
-    // Make API request if validation passed
     axios({
       method: "post",
       url: "http://localhost:8080/api/users",
@@ -83,29 +80,25 @@ const Signup = () => {
     })
       .then(function (response) {
         navigate("/login");
-        // Handle success
         console.log(response);
       })
       .catch(function (response) {
         navigate("/");
-        // Handle error
         console.log(response);
       });
   };
 
-  // Navigacija na Login stranicu
   const handleLoginRedirect = () => {
-    navigate("/login"); // Redirects to login page
+    navigate("/login");
   };
 
-  // Close pop-up
   const handleClose = () => {
-    navigate("/"); // Hides the form when close button is clicked
+    navigate("/");
   };
 
   return (
     <>
-      {showForm && ( // Conditionally render the form if showForm is true
+      {showForm && (
         <div className="sve">
           <div className="sve">
             <div className="forma">

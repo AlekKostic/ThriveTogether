@@ -38,11 +38,9 @@ const ForumPost = ({ post }) => {
       headers: { "Content-Type": "application/json" },
     })
       .then(function (response) {
-        // Handle success
         console.log(response);
       })
       .catch(function (response) {
-        // Handle error
         console.log(response);
       });
   };

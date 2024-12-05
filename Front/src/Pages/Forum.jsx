@@ -13,19 +13,19 @@ const Forum = () => {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
 
-  const [isModalOpen, setModalOpen] = useState(false); // State to control popup visibility
+  const [isModalOpen, setModalOpen] = useState(false);
 
   const addPost = () => {
     if (parseInt(localStorage.getItem("userID")) === -1) {
       navigate("/login");
       return;
     }
-    setModalOpen(true); // Open the modal when the button is clicked
+    setModalOpen(true);
   };
 
   const closeModal = () => {
     console.log("evo");
-    setModalOpen(false); // Close the modal when called
+    setModalOpen(false);
   };
 
   useEffect(() => {

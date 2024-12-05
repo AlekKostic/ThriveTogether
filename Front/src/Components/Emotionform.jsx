@@ -7,7 +7,7 @@ import axios from "axios";
 
 const Emotionform = ({ closeModal }) => {
   const [tekst, setTekst] = useState("");
-  const [emotion, setEmotion] = useState(""); // Track the selected emotion
+  const [emotion, setEmotion] = useState("");
 
   const [emotionE, setEmotionE] = useState("");
 
@@ -35,14 +35,12 @@ const Emotionform = ({ closeModal }) => {
       headers: { "Content-Type": "application/json" },
     })
       .then(function (response) {
-        // Handle success
         closeModal();
         window.location.reload();
 
         console.log(response);
       })
       .catch(function (response) {
-        // Handle error
         closeModal();
         console.log(response);
       });
@@ -91,7 +89,6 @@ const Emotionform = ({ closeModal }) => {
           </div>
           <div className="login-error ">{emotionE}</div>
 
-          {/* Emotion Description */}
           <div>
             <input
               value={tekst}
@@ -101,7 +98,6 @@ const Emotionform = ({ closeModal }) => {
             />
           </div>
 
-          {/* Submit Button */}
           <div className="post-submit-dugme-div">
             <button
               type="submit"

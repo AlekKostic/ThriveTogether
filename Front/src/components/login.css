@@ -76,7 +76,7 @@ html {
   text-align: center;
   box-sizing: border-box;
 
-  max-width: 90%; /* Ensures responsiveness */
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -292,14 +292,14 @@ hr {
   vertical-align: top;
 }
 .input-com {
-  display: flex; /* Allows flexible alignment */
-  justify-content: flex-start; /* Aligns content to the left */
-  margin-bottom: 10px; /* Adds space between the input and buttons */
-  width: 100%; /* Optional: Ensures input spans container width */
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .input-com input {
-  width: 50%; /* Adjust as needed */
+  width: 50%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -310,16 +310,16 @@ hr {
 .showcom2 {
   background-color: #e0e7d9;
   color: #4d7c71;
-  padding: 5px 10px; /* Consistent padding */
+  padding: 5px 10px;
   margin-top: 10px;
   margin-left: 10px;
   font-size: 15px;
   border-radius: 10px;
-  border: none; /* No borders */
+  border: none;
   cursor: pointer;
-  display: inline-flex; /* Ensures consistent alignment */
-  align-items: center; /* Centers text vertically */
-  justify-content: center; /* Centers text horizontally */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: background-color 0.3s;
 }
 
@@ -336,7 +336,7 @@ hr {
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ensure the container spans the full viewport height */
+  height: 100vh;
 }
 
 .footer {
@@ -359,8 +359,8 @@ hr {
 .postt {
   height: 50px;
   width: 200px;
-  padding: 10px 15px; /* Added more padding for a better look */
-  text-align: center; /* Center text horizontally */
+  padding: 10px 15px;
+  text-align: center;
   font-size: 20px;
   background-color: #9dbcb0;
   color: white;
@@ -377,19 +377,18 @@ hr {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 .modal-overlay {
-  position: fixed; /* Ensures modal is fixed at the top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensure it's above all other content */
+  z-index: 1000;
 }
 
-/* Styling the search container to center the search input */
 .search-container {
   margin-top: 20px;
   display: flex;
@@ -397,21 +396,19 @@ hr {
   margin-bottom: 20px;
 }
 
-/* Styling the search input field */
 .search-input {
-  width: 250px; /* Set width to a moderate value */
-  padding: 10px 20px; /* Padding for the input */
-  font-size: 1rem; /* Font size for text */
-  border-radius: 25px; /* Rounded corners */
-  border: 2px solid #ddd; /* Light border */
-  background-color: #f9f9f9; /* Light background */
+  width: 250px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 2px solid #ddd;
+  background-color: #f9f9f9;
 }
 
-/* Styling the search button */
 .search-button {
   padding: 10px 20px;
-  background-color: #457d99; /* Blue background */
-  color: white; /* White text */
+  background-color: #457d99;
+  color: white;
   border: none;
   border-radius: 25px;
   font-size: 1rem;
@@ -420,29 +417,27 @@ hr {
   transition: 0.3s background-color ease;
 }
 
-/* On hover, change background color of the search button */
 .search-button:hover {
-  background-color: rgb(69, 153, 195); /* Darker blue background on hover */
+  background-color: rgb(69, 153, 195);
 }
 
-/* Ensure search bar layout is good across all devices */
 @media (max-width: 768px) {
   .search-input {
-    width: 200px; /* Adjust width for smaller screens */
+    width: 200px;
   }
 
   .search-button {
-    padding: 8px 16px; /* Adjust button size */
+    padding: 8px 16px;
   }
 }
 
 @media (max-width: 480px) {
   .search-input {
-    width: 150px; /* Smaller width on very small screens */
+    width: 150px;
   }
 
   .search-button {
-    padding: 6px 12px; /* Adjust button size */
+    padding: 6px 12px;
   }
 }
 
@@ -455,7 +450,6 @@ hr {
   gap: 50px;
 }
 
-/* Style the individual course card */
 .course-item {
   background-color: #f4f4f4;
   border-radius: 12px;
@@ -474,7 +468,6 @@ hr {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Title Style inside course card */
 .course-title {
   font-size: 1.4rem;
   color: #333;
@@ -483,16 +476,14 @@ hr {
   font-weight: bold;
 }
 
-/* Description Style inside course card */
 .course-item p {
   font-size: 1rem;
   color: #555;
   margin-bottom: 15px;
-  height: 70px; /* Limit description height */
+  height: 70px;
   overflow: hidden;
 }
 
-/* Link Styling inside course card */
 .course-item a {
   color: #457d99;
   text-decoration: none;
@@ -506,7 +497,6 @@ hr {
   color: #389cce;
 }
 
-/* Responsiveness for smaller screens */
 @media (max-width: 768px) {
   .course-item {
     width: 100%;
@@ -514,31 +504,30 @@ hr {
   }
 }
 
-/* Reply card container */
 .reply-card {
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.1); /* Light gray background */
-  border: 1px solid #ddd; /* Subtle border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 12px 16px; /* Padding for content */
-  margin-bottom: 10px; /* Spacing between replies */
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
 
 .reply-text {
   font-size: 18px;
-  color: white; /* Dark text for readability */
+  color: white;
   line-height: 1.6;
-  word-wrap: break-word; /* Ensure long text wraps properly */
+  word-wrap: break-word;
 }
 
 .forumm {
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 100vh; /* Ensures full viewport height */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  text-align: center; /* Optional, for text alignment */
+  text-align: center;
 }
 
 .postovi {
@@ -557,41 +546,38 @@ hr {
   color: white;
   cursor: pointer;
 }
-/* Apply a background to the div wrapping the content */
+
 .page-background {
-  background-image: url("blurr.jpg"); /* Add your image URL here */
-  background-size: cover; /* Ensures the background covers the entire div */
-  background-position: center; /* Centers the background image */
-  height: 100vh; /* Ensures the div takes up the full height of the viewport */
+  background-image: url("blurr.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
 
-/* Dropdown menu container */
 .dropdown-menu {
   position: absolute;
-  top: 40px; /* Position below the username */
+  top: 40px;
   right: 20px;
   background-color: white;
   color: black;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   width: 200px;
-  display: none; /* Initially hidden */
+  display: none;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease, top 0.3s ease;
 }
 
-/* Display dropdown when active */
 .dropdown-menu.show {
   display: block;
   opacity: 1;
   pointer-events: all;
-  top: 40px; /* Position directly below the username */
+  top: 40px;
 }
 
-/* Individual dropdown item styling */
 .dropdown-item {
   padding: 10px;
   border-bottom: 1px solid #ddd;
@@ -599,17 +585,14 @@ hr {
   transition: background-color 0.3s;
 }
 
-/* Last item in dropdown without a border */
 .dropdown-item:last-child {
   border-bottom: none;
 }
 
-/* Hover effect on dropdown items */
 .dropdown-item:hover {
   background-color: #f0f0f0;
 }
 
-/* Input field inside dropdown */
 .dropdown-item input {
   width: calc(100% - 20px);
   padding: 5px;
@@ -619,7 +602,6 @@ hr {
   border-radius: 4px;
 }
 
-/* Button inside dropdown */
 .dropdown-item button {
   padding: 8px 12px;
   background-color: #8fac9f;
@@ -630,133 +612,36 @@ hr {
   width: 100%;
 }
 
-/* Hover effect for button inside dropdown */
 .dropdown-item button:hover {
   background-color: rgb(97, 170, 101);
 }
 
 .quote {
-  margin-top: 50px; /* Povećano razmak između citata i vrha */
-  font-size: 50px; /* Veliki font za citat */
-  font-family: "Georgia", serif; /* Elegantan font */
-  text-align: center; /* Poravnanje teksta u centru */
-  margin-bottom: 50px; /* Manji razmak ispod citata */
-  color: #457d99; /* Prijatna plava boja teksta */
-  font-weight: 700; /* Povećana debljina fonta za bold efekat */
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Senka teksta za dubinu */
-  line-height: 1.5; /* Razmak između redova */
-  letter-spacing: 1px; /* Razmak između slova */
-  max-width: 80%; /* Ograničen širina citata */
-  margin-left: auto; /* Centriranje citata sa leve strane */
-  margin-right: auto; /* Centriranje citata sa desne strane */
-  padding: 20px; /* Unutrašnji razmak oko citata */
-  border-radius: 10px; /* Zaobljeni ivice */
-  background-color: rgba(255, 255, 255, 0.8); /* Poluprovidna pozadina */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Blagi senka oko citata */
-  transition: all 0.3s ease; /* Animacija za sve promene */
+  margin-top: 50px;
+  font-size: 50px;
+  font-family: "Georgia", serif;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #457d99;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
+  letter-spacing: 1px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .quote:hover {
-  color: #5095b7; /* Promena boje na narandžasto prilikom hover efekta */
-  transform: scale(1.05); /* Lagano povećanje citata */
+  color: #5095b7;
+  transform: scale(1.05);
 }
 
 .aaaalo {
   margin-bottom: 100px;
-}
-@media (max-width: 768px) {
-  .forma {
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .forum-post-form {
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .input-post {
-    height: 300px;
-  }
-
-  .post-submit-dugme {
-    width: 90px;
-  }
-
-  .search-input {
-    width: 200px;
-  }
-
-  .search-button {
-    padding: 8px 16px;
-  }
-
-  .course-item {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .postt {
-    width: 100%;
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .forma {
-    width: 95%;
-    padding: 1rem;
-  }
-
-  .forum-post-form {
-    width: 95%;
-    padding: 1rem;
-  }
-
-  .input-post {
-    height: 200px;
-  }
-
-  .post-submit-dugme {
-    width: 80px;
-    height: 35px;
-  }
-
-  .search-input {
-    width: 150px;
-  }
-
-  .search-button {
-    padding: 6px 12px;
-  }
-
-  .course-item {
-    width: 100%;
-    padding: 12px;
-  }
-
-  .postt {
-    width: 100%;
-    padding: 12px;
-  }
-}
-
-@media (max-width: 320px) {
-  .input-post {
-    height: 180px;
-  }
-
-  .input-post-emo {
-    height: 200px;
-  }
-
-  .course-item {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .postt {
-    width: 100%;
-    padding: 10px;
-  }
 }

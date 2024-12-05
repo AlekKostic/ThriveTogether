@@ -36,7 +36,7 @@ const ForumPostForm = ({ closeModal, user_id }) => {
         navigate("/forum");
         console.log(response);
       });
-    window.location.reload(); // Refreshes the page
+    window.location.reload();
   };
 
   return (

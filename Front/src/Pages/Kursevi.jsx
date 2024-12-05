@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import courses from '../Components/courses';  // Importing courses data directly
-import Hero from '../Components/Hero';
+import courses from "../Components/courses";
+import Hero from "../Components/Hero";
 
 const Kursevi = () => {
-  const [courseList] = useState(courses);  // Storing courses data in state
-  const [searchTerm, setSearchTerm] = useState(""); // State to hold search term
+  const [courseList] = useState(courses);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  // Filtering the courses based on the search term
-  const filteredCourses = courseList.filter(course => {
-    return course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-           course.description.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredCourses = courseList.filter((course) => {
+    return (
+      course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      course.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   });
 
   return (
@@ -19,18 +20,18 @@ const Kursevi = () => {
       <div className="kursevi-container">
         <Navbar />
         <div className="hero-section">
-            <div className="Hero2"></div>
-        </div> 
+          <div className="Hero2"></div>
+        </div>
 
         <div className="search-container">
-        <input
-          type="text"
-          className="search-input"
-          placeholder="Search for courses..."
-          onChange={(e)=>setSearchTerm(e.target.value)}
-        />
-        <button className="search-button">Search</button>
-      </div>
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search for courses..."
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <button className="search-button">Search</button>
+        </div>
 
         <div className="courses-list">
           {filteredCourses.length > 0 ? (
