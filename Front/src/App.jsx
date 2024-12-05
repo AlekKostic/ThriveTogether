@@ -8,12 +8,12 @@ import Statistika from "./Pages/Statistika";
 import Kursevi from "./Pages/Kursevi";
 import ForumPostForm from "./Components/ForumPostForm";
 import Signup from "./Components/Signup";
-import Login from "./Components/Login";
 
 const App = () => {
-  if (localStorage.getItem("userID") === null)
-    localStorage.setItem("userID", 2);
-
+  if (localStorage.getItem('userID')===null){
+   localStorage.setItem("userID", 1);
+   localStorage.setItem("username", "hakaton");
+  }
   return (
     <>
       <Router>

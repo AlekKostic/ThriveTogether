@@ -16,6 +16,8 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    localStorage.setItem('userID', 1);
+
     setUsernameE('');
     setPasswordE('');
 
@@ -39,6 +41,7 @@ const Login = () => {
     })
       .then(function (response) {
         localStorage.setItem('userID', response.id);
+        localStorage.setItem('username', response.username);
         console.log(response);
       })
       .catch(function (response) {

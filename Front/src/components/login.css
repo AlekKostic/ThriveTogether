@@ -150,6 +150,20 @@ html{
     font-family: 'Times New Roman', Times, serif;
     font-size:17px;
 }
+.logout-dugme{
+    background-color:rgb(162, 78, 78);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:17px;
+    border:none;
+    border-radius:8px;
+    padding:5px 20px;
+    transition: 0.3s background-color ease;
+}
+
+.logout-dugme:hover{
+    background-color: rgb(137, 66, 66);
+}
 .post-submit-dugme{
     padding: 20px;
     background-color: #4CAF50;
@@ -266,22 +280,48 @@ hr{
     display: flex;
     justify-content: flex-end;
 }
+.befr{
+    color: #e0e7d9;
+    padding: 5px;
+}
+.mali-footer{
+    vertical-align: top;
+}
+.input-com {
+    display: flex; /* Allows flexible alignment */
+    justify-content: flex-start; /* Aligns content to the left */
+    margin-bottom: 10px; /* Adds space between the input and buttons */
+    width: 100%; /* Optional: Ensures input spans container width */
+}
 
-.showcom {
-    
+.input-com input {
+    width: 50%; /* Adjust as needed */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+
+.showcom, .showcom2 {
     background-color: #e0e7d9;
     color: #4d7c71;
-    padding: 5px;
-    float: right;
+    padding: 5px 10px; /* Consistent padding */
     margin-top: 10px;
+    margin-left: 10px;
     font-size: 15px;
     border-radius: 10px;
-    border: none;
+    border: none; /* No borders */
     cursor: pointer;
-    display: inline-flex;
+    display: inline-flex; /* Ensures consistent alignment */
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
     transition: background-color 0.3s;
 }
 
+.showcom2{
+    float:left;
+}
 .showcom:hover {
     background-color: #c5cbbf;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -519,9 +559,9 @@ hr{
     background-image: url('blurr.jpg');  /* Add your image URL here */
     background-size: cover;  /* Ensures the background covers the entire div */
     background-position: center;  /* Centers the background image */
-    background-attachment: fixed;  /* Keeps the background fixed while scrolling */
     height: 100vh;  /* Ensures the div takes up the full height of the viewport */
-    width: 100%;  
+    width: 100vw; 
+    overflow:hidden 
   }
 
   

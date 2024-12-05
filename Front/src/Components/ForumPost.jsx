@@ -6,46 +6,14 @@ import Reply from "./Reply";
 import axios from "axios";
 
 const ForumPost = ({ post }) => {
-  const [odg, setOdg] = useState([
-    {
-        "id_odgovora": 2,
-        "odgovor": "test2",
-        "pitanja": {
-            "id_pitanja": 1,
-            "head": "test",
-            "user": {
-                "id": 6,
-                "ime": "test",
-                "prezime": "prezime",
-                "email": "test@test.com",
-                "password": "jeuju",
-                "username": "test"
-            }
-        }
-    },
-    {
-        "id_odgovora": 3,
-        "odgovor": "test2",
-        "pitanja": {
-            "id_pitanja": 1,
-            "head": "test",
-            "user": {
-                "id": 6,
-                "ime": "test",
-                "prezime": "prezime",
-                "email": "test@test.com",
-                "password": "jeuju",
-                "username": "test"
-            }
-        }
-    }
-]);
+  const [odg, setOdg] = useState([]);
+  const [novio, setnovio]=useState("");
 
   const [showComments, setShowComments] = useState(false);
 
   const handleShowComments = () => {
     setShowComments(!showComments);
-    axios({
+    /*axios({
       method: "get",
       url: `http://localhost:8080/api/odgovori/${post.id_pitanja}`,
       headers: { "Content-Type": "application/json" },
@@ -55,29 +23,59 @@ const ForumPost = ({ post }) => {
       })
       .catch(function (error) {
         console.log(error);
-      });
+      });*/
   };
 
+  const handleNew = () =>
+  {
+      //dodaj u bazu;
+      if (novio.trim()) { 
+        const newComment = { id_odgovora: odg.length + 1, odgovor: novio }; 
+        setOdg([...odg, newComment]); // Add it to the list
+        console.log("New Comment Added:", newComment);
+        setnovio(""); // Reset the input field
+      } else {
+        console.log("Empty comment, not added.");
+      }
+      setShowComments(true);
+  } 
+
   return (
-    <div className="post" key={post.id_pitanja}>
-      <h3 className="post-user">{post.user.username}</h3>
-      <p className="post-text">{post.head}</p>
-      <div className="dugmecom">
-        <button className="showcom" onClick={handleShowComments}>
-        {showComments ?<FaAngleDown /> :<FaAngleUp/>}
-          {showComments ?"Sakrij komentare" :"Prikazi komentare"}
-        </button>
-      </div>
-      {/* Render comments conditionally */}
-      {showComments && (
-        <div className="comments">
-          {odg.map((o) => (
-            <Reply key={o.id_odgovora} odg={o.odgovor} />
-          ))}
+          <div className="post" key={post.id_pitanja}>
+            <h3 className="post-user">{post.user.username}</h3>
+            <p className="post-text">{post.head}</p>
+            <div className="malifooter">
+            <div>
+              <input
+              className="showcom2"
+                value={novio}
+                placeholder="Comment..."
+                onChange={(e) => setnovio(e.target.value)}
+              />
+            </div>
+            
+            <div className="dugmecom">
+              <button className="showcom" onClick={handleNew}>Komentarisi</button>
+              <button className="showcom" onClick={handleShowComments}>
+                {showComments ? <FaAngleDown /> : <FaAngleUp />}
+                {showComments ? "Sakrij komentare" : "Prikazi komentare"}
+              </button>
+            </div>
+            </div>
+            {showComments && (
+              odg.length > 0 ? (
+                <div className="comments">
+                  {odg.map((o) => (
+                    <Reply key={o.id_odgovora} odg={o.odgovor} />
+                  ))}
+                </div>
+              ) : (
+                <p className="befr">Budite prvi da komentarisete!</p>
+              )
+            )}
         </div>
-      )}
-    </div>
   );
-};
+  
+}
 
 export default ForumPost;

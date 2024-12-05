@@ -1,54 +1,85 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'; // Importujte useNavigate
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
 
+  // State initialization from localStorage or default values
+  const [userID, setUserID] = useState(() => {
+    return localStorage.getItem('userID') ? parseInt(localStorage.getItem('userID')) : -1;
+  });
   
-    const navigate = useNavigate(); // Inicijalizujte useNavigate
+  const [username, setUsername] = useState(() => {
+    return localStorage.getItem('username') || 'hakaton';
+  });
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setUserID(localStorage.getItem('userID') ? parseInt(localStorage.getItem('userID')) : -1);
+      setUsername(localStorage.getItem('username') || 'hakaton');
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
+
   const handleLoginRedirect = () => {
-    navigate("/login"); // Ovaj kod preusmerava na login stranicu
+    navigate("/login");
   };
+
   const handleSigninRedirect = () => {
-    navigate("/signup"); // Ovaj kod preusmerava na login stranicu
+    navigate("/signup");
   };
+
   const handleForumRedirect = () => {
     navigate('/forum');
   };
+
   const handleStatistikaRedirect = () => {
     navigate('/statistika');
   };
+
   const handleKurseviRedirect = () => {
     navigate('/kursevi');
   };
+
   const handleHomeRedirect = () => {
     navigate('/');
   };
-  console.log(localStorage.getItem('userID'));
+
+  const logout = () => {
+    localStorage.setItem('userID', -1);
+    ///localStorage.setItem('username', '');
+    setUserID(-1);
+    //setUsername('');
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        {/*<ul className="sidenav">*/}
-        <img href="Front\public\MentalHealthLogo.png" className="llogo"></img>
-        <a href='/'>Home</a>
-        <a href="#forum" onClick={handleForumRedirect}>Forum</a>
-        <a href="#statistika" onClick={handleStatistikaRedirect}>Statistika</a>
-        <a href="#kursevi" onClick={handleKurseviRedirect}>Kursevi</a>
-        {/*</ul>*/}
+        <img src="Front/public/MentalHealthLogo.png" className="llogo" alt="Logo" />
+        <a onClick={handleHomeRedirect}>Home</a>
+        <a onClick={handleForumRedirect}>Forum</a>
+        <a onClick={handleStatistikaRedirect}>Statistika</a>
+        <a onClick={handleKurseviRedirect}>Kursevi</a>
       </div>
       <div className="navbar-right">
-      {
-      parseInt(localStorage.getItem('userID')) === -1 ? (
-        <>
-          <a onClick={handleLoginRedirect}>Login</a>
-          <a onClick={handleSigninRedirect}>Signup</a>
-        </>
-      ) : (
-        <span>aaa</span>
-      )
-    }
+        {userID === -1 ? (
+          <>
+            <a onClick={handleLoginRedirect}>Login</a>
+            <a onClick={handleSigninRedirect}>Signup</a>
+          </>
+        ) : (
+          <>
+            <p className="usernamee">{username}</p>
+            <button className="logout-dugme" onClick={logout}>Odjavi se</button>
+          </>
+        )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
