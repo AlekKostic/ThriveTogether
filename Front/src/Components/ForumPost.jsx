@@ -6,7 +6,40 @@ import Reply from "./Reply";
 import axios from "axios";
 
 const ForumPost = ({ post }) => {
-  const [odg, setOdg] = useState([]);
+  const [odg, setOdg] = useState([
+    {
+        "id_odgovora": 2,
+        "odgovor": "test2",
+        "pitanja": {
+            "id_pitanja": 1,
+            "head": "test",
+            "user": {
+                "id": 6,
+                "ime": "test",
+                "prezime": "prezime",
+                "email": "test@test.com",
+                "password": "jeuju",
+                "username": "test"
+            }
+        }
+    },
+    {
+        "id_odgovora": 3,
+        "odgovor": "test2",
+        "pitanja": {
+            "id_pitanja": 1,
+            "head": "test",
+            "user": {
+                "id": 6,
+                "ime": "test",
+                "prezime": "prezime",
+                "email": "test@test.com",
+                "password": "jeuju",
+                "username": "test"
+            }
+        }
+    }
+]);
 
   const [showComments, setShowComments] = useState(false);
 

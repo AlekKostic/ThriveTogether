@@ -10,7 +10,7 @@ html{
 }
 
 .forma {
-    background-color: gray;
+    background-color: #8eac9f;
     padding: 2rem 3rem;
     border-radius: 12px;
     text-align: center;
@@ -22,21 +22,24 @@ html{
 
 .naslovforme {
     font-size: 1.8rem;
-    margin-top: 1rem;
     margin-bottom: 2rem;
     color: white;
 }
 
 .input-polja, .input-post {
+    background-color: #4d7c71;
+    color:white;
     border-radius: 10px;
     border: none;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     font-size: 1rem;
     box-sizing: border-box;
     text-align: left;
-    padding-top: 5px;
     vertical-align: top;
+}
+.input-polja::placeholder{
+    color:white;
 }
 
 .submit-login {
@@ -47,23 +50,25 @@ html{
     border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
+    background-color: #d6d0c5;
     transition: background-color 0.3s ease;
 }
 
 .submit-login:hover {
-    background-color: #45a049;
+    background-color: #c7c1b5;
 }
 
 .login-error {
-    color: red;
-    font-size: 0.875rem;
+    color: rgb(162, 58, 58);;
+    font-size: 17px;
+    font-weight: bold;
     margin-bottom: 0.5rem;
     margin-top: 5px;
     text-align: center;
 }
 
 .forum-post-form, .forum-emo-form {
-    background-color: purple;
+    background-color: #81acbe;
     padding: 2rem 3rem;
     border-radius: 12px;
     text-align: center;
@@ -82,15 +87,19 @@ html{
 }
 
 .input-post, .input-post-emo {
+    background-color: #33617c;
+    color:white;
     width: 100%;
     position: relative;
     padding: 10px;
     font-size: 1rem;
     border-radius: 10px;
     border: none;
-    box-sizing: border-box;
     vertical-align: top;
     text-align: left;
+}
+.input-post-emo::placeholder{
+    color:rgba(255,255,255,0.6);
 }
 
 .input-post{
@@ -107,7 +116,7 @@ html{
     text-align: left;
     left: 15px;
     font-size: 1rem;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .naslov-posta {
@@ -138,19 +147,23 @@ html{
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:17px;
 }
 .post-submit-dugme{
+    padding: 20px;
     background-color: #4CAF50;
 }
 .post-cancel-dugme{
-    background-color: red;
+    padding: 20px;
+    background-color: rgb(162, 58, 58);
 }
 
 .post-submit-dugme:hover {
     background-color: #45a049;
 }
 .post-cancel-dugme:hover {
-    background-color: pink;
+    background-color: rgb(162, 78, 78);
 }
 
 @media (max-width: 768px) {
@@ -201,7 +214,7 @@ html{
 }
 
 a{
-    color: blue;
+    color: #18445b;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -223,7 +236,7 @@ hr{
 }
 
 .post{
-    background-color:red;
+    background-color:#8fac9f;
     border:none;
     border-radius: 10px;
     width:700px;
@@ -234,14 +247,19 @@ hr{
 
 .post-user{
     font-size: 25px;
+    color: white;
     margin-bottom:10px;
+    padding:10px;
 }
 
 .post-text{
-    background-color: blue;
+    background-color: #4d7c71;
     border-radius: 8px;
-    padding:7px;
+    padding:15px;
     font-size: 20px;
+    color:white;
+    text-align: left;
+
 }
 
 .dugmecom{
@@ -251,7 +269,8 @@ hr{
 
 .showcom {
     
-    background-color: yellow;
+    background-color: #e0e7d9;
+    color: #4d7c71;
     padding: 5px;
     float: right;
     margin-top: 10px;
@@ -264,24 +283,29 @@ hr{
 }
 
 .showcom:hover {
-    background-color: orange;
+    background-color: #c5cbbf;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 .forum-container, .kursevi-container, .statistika-container {
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     height: 100vh; /* Ensure the container spans the full viewport height */
 }
 
 .footer {
-    margin-top: auto; /* Pushes the footer to the bottom */
     background-color: #f4f4f4;
     text-align: center;
-    padding: 10px;
+    left:0;
+    bottom:0;
+    width: 100%;
 }
 
 .postavi-objavi{
-    margin:10px;
+    margin:30px;
+}
+.postavi-objavi2{
+    margin:auto;
 }
 
 .postt {
@@ -289,18 +313,19 @@ hr{
     width: 200px;
     padding: 10px 15px; /* Added more padding for a better look */
     text-align: center; /* Center text horizontally */
-    font-size: 18px; 
-    background-color: #28a745;
+    font-size: 20px; 
+    background-color: #9dbcb0;
     color: white; 
     border: none;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     cursor: pointer;
     transition: all 0.3s ease; 
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .postt:hover {
-    background-color: #218838; 
+    background-color: #5c8978; 
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
 }
 .modal-overlay {
@@ -318,6 +343,8 @@ hr{
 
 /* Styling the search container to center the search input */
 .search-container {
+    
+    margin-top:20px;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -333,28 +360,23 @@ hr{
     background-color: #f9f9f9; /* Light background */
 }
 
-/* On focus, change border color and background color */
-.search-input:focus {
-    outline: none;
-    border-color: #007bff; /* Change border color on focus */
-    background-color: #fff; /* Change background to white on focus */
-}
 
 /* Styling the search button */
 .search-button {
     padding: 10px 20px;
-    background-color: #007bff; /* Blue background */
+    background-color: #457d99; /* Blue background */
     color: white; /* White text */
     border: none;
     border-radius: 25px;
     font-size: 1rem;
     cursor: pointer;
     margin-left: 10px;
+    transition: 0.3s background-color ease;
 }
 
 /* On hover, change background color of the search button */
 .search-button:hover {
-    background-color: #0056b3; /* Darker blue background on hover */
+    background-color: rgb(69, 153, 195); /* Darker blue background on hover */
 }
 
 /* Ensure search bar layout is good across all devices */
@@ -380,10 +402,12 @@ hr{
 
 
 .courses-list {
+    padding-left:10px;
+    padding-bottom: 30px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    margin: 20px;
 }
   
   /* Style the individual course card */
@@ -425,7 +449,7 @@ hr{
   
   /* Link Styling inside course card */
   .course-item a {
-    color: #007bff;
+    color: #457d99;
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -434,7 +458,7 @@ hr{
   
   .course-item a:hover {
     text-decoration: underline;
-    color: #0056b3;
+    color: #389cce;
   }
   
   /* Responsiveness for smaller screens */
@@ -448,22 +472,56 @@ hr{
 
 /* Reply card container */
 .reply-card {
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.1);/* Light gray background */
     border: 1px solid #ddd;   /* Subtle border */
     border-radius: 8px;       /* Rounded corners */
     padding: 12px 16px;       /* Padding for content */
     margin-bottom: 10px;      /* Spacing between replies */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effects */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    text-align:left;    
   }
   
   .reply-text {
-    font-size: 14px;
-    color: #333; /* Dark text for readability */
+    font-size: 18px;
+    color: white; /* Dark text for readability */
     line-height: 1.6;
     word-wrap: break-word; /* Ensure long text wraps properly */
   }
   
   
+.forumm {
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    height: 100vh;          /* Ensures full viewport height */
+    margin: 0;
+    text-align: center;     /* Optional, for text alignment */
+}
 
+.postovi{
+    margin-top:30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-bottom:50px;
+}
+
+.gase{
+    text-align: right;
+    padding:0;
+    margin:0;
+    font-size:30px;
+    color:white;
+    cursor: pointer;
+}
+/* Apply a background to the div wrapping the content */
+.page-background {
+    background-image: url('blurr.jpg');  /* Add your image URL here */
+    background-size: cover;  /* Ensures the background covers the entire div */
+    background-position: center;  /* Centers the background image */
+    background-attachment: fixed;  /* Keeps the background fixed while scrolling */
+    height: 100vh;  /* Ensures the div takes up the full height of the viewport */
+    width: 100%;  
+  }
+
+  

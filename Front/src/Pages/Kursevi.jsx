@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import courses from '../Components/courses';  // Importing courses data directly
+import Hero from '../Components/Hero';
 
 const Kursevi = () => {
   const [courseList] = useState(courses);  // Storing courses data in state
@@ -17,8 +18,9 @@ const Kursevi = () => {
     <div>
       <div className="kursevi-container">
         <Navbar />
-        <h2>Kursevi</h2>
-        <p>Odaberite kurs koji želite</p>
+        <div className="hero-section">
+            <div className="Hero2"></div>
+        </div> 
 
         <div className="search-container">
         <input

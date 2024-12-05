@@ -5,10 +5,9 @@ import Footer from '../Components/Footer'
 
 const Signinpage = () => {
   return (
-    <div>
+    <div className="page-background">
       <Navbar />
       <Signup />
-      <Footer />
     </div>
   )
 }

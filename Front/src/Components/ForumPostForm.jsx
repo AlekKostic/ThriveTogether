@@ -8,6 +8,15 @@ const ForumPostForm = ({ closeModal, user_id }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    let isValid = true;
+    if(!tekst)
+    {
+      setTekstE("Unesite tekst.")
+      return;
+    }else setTekstE("")
+
+    
     axios({
       method: "post",
       url: "http://localhost:8080/api/pitanja/create",

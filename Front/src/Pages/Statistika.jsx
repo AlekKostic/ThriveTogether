@@ -19,10 +19,11 @@ const Statistika = () => {
     <div>
         <div className="statistika-container">
         <Navbar />
-        <h2>Statistika</h2>
-        <p>Statistika vazeg zdravlja</p>
+        <div className="hero-section">
+            <div className="Hero4"></div>
+        </div> 
 
-        <div className="postavi-objavi">
+        <div className="postavi-objavi2">
         <button className="postt" onClick={addPost}>+ Dodaj osecanje</button>
       </div>
  

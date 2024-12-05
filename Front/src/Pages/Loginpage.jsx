@@ -1,15 +1,15 @@
-import React from 'react'
-import Login from '../components/Login'
-import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
+import React from 'react';
+import Login from '../components/Login';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
+
 const Loginpage = () => {
   return (
-    <div>
+    <div className="page-background"> {/* Apply the background class */}
       <Navbar />
       <Login />
-      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Loginpage
+export default Loginpage;

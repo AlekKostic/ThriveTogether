@@ -41,6 +41,7 @@
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+    border-bottom: 1px solid #98988a;
 }
 
 .navbar-left {
@@ -57,8 +58,8 @@
 
 .navbar a {
   text-decoration: none;
-  color: #1995AD;
-  font-size: 25px;
+  color: #98988a;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -95,9 +96,8 @@
   border-right: none;
 }
 
-.Hero {
+.Hero, .Hero2, .Hero3, .Hero4 {
     z-index: -1;
-    background-image: url('MentalHealthSlicka.jpg');
     flex: none;
     display: flex;
     justify-content: center;
@@ -109,6 +109,19 @@
     position: relative;
     width: 100%;
     height: 75vh
+}
+
+.Hero{
+  background-image: url('MentalHealthSlicka.jpg');
+}
+.Hero2{
+  background-image: url('hero2.jpg');
+}
+.Hero3{
+  background-image: url('hero3.jpg');
+}
+.Hero4{
+  background-image: url('hedro4.jpg');
 }
 
 .Hero-content {
@@ -128,13 +141,13 @@
   }
 
  .footer {
-    margin-top: auto;
     width: 100%;
     text-align: center;
     background-color: #c6dad8;
     color: #1995AD;
     padding: 10px 0;
     justify-content: space-between;
+    margin-bottom: 0;
 }
 
  .footer p{

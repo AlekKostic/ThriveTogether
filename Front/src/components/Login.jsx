@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
 import './login.css';
 import { useNavigate } from 'react-router-dom'; // Importujte useNavigate
+import { IoIosClose } from "react-icons/io";
 
 const Login = () => {
 
@@ -51,9 +52,15 @@ const Login = () => {
     navigate("/signup"); // Ovaj kod preusmerava na login stranicu
   };
 
+  const handleClose = () => {
+    navigate("/"); // Ovaj kod preusmerava na login stranicu
+  };
+
   return (
     <div className="sve">
+      
     <div className="forma">
+    <div className="gase" onClick={handleClose}><IoIosClose /></div>
       <div className="naslovforme">
         <p>Login</p>
       </div>
