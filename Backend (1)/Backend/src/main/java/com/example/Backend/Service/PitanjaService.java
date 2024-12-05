@@ -36,24 +36,6 @@ public class PitanjaService {
         List<Pitanja> pitanje = pitanjaRepository.getAllByUser_Id(id);
         return pitanje;
     }
-    public Pitanja updatePitanja(Long pitanjaId, String novihead, Long userId) {
-
-        Pitanja pitanje = pitanjaRepository.findById(pitanjaId)
-                .orElseThrow(() -> new RuntimeException("Order not found"));
-
-
-        pitanje.setHead(novihead);
-
-
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-
-
-        pitanje.setUser(user);
-
-
-        return pitanjaRepository.save(pitanje);
-    }
     public ResponseEntity deletePitanja(Long pitanjeid){
         Pitanja pitanja = pitanjaRepository.findById(pitanjeid).orElseThrow(() -> new RuntimeException("Order not found"));
         pitanja.setUser(null);

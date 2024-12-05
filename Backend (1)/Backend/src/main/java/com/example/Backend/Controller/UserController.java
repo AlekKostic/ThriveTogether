@@ -1,5 +1,6 @@
 package com.example.Backend.Controller;
 
+import com.example.Backend.Model.Pitanja;
 import com.example.Backend.Model.User;
 import com.example.Backend.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,17 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @PutMapping("/{userId}")
+    public User updatePitanje(
+            @PathVariable Long userId,
+            @RequestParam String noviusername) {
+        return userService.updatePitanja(userId, noviusername);
+    }
+    @DeleteMapping("/{userid}")
+    public ResponseEntity deletePitanje(@PathVariable("userid") Long id){
+        return userService.deleteUser(id);
+    }
+
 
 }

@@ -30,15 +30,5 @@ public class PitanjaController {
     public List<Pitanja> getAllPitanjaDashboar(@PathVariable(name = "id") Long id){
         return pitanjaService.getAllPitanjaDashboar(id);
     }
-    @PutMapping("/{pitanjaId}")
-    public Pitanja updatePitanje(
-            @PathVariable Long pitanjaId,
-            @RequestParam String novihead,
-            @RequestParam Long userId) {
-        return pitanjaService.updatePitanja(pitanjaId, novihead, userId);
-    }
-    @DeleteMapping("/{pitanjeid}")
-    public ResponseEntity deletePitanje(@PathVariable("pitanjeid") Long id){
-        return pitanjaService.deletePitanja(id);
-    }
+
 }
