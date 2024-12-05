@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { MdOutlineExpandMore } from "react-icons/md";
+import { FaAngleUp } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
+
 import Reply from "./Reply";
 
 const ForumPost = ({ post }) => {
@@ -50,8 +52,8 @@ const ForumPost = ({ post }) => {
       <p className="post-text">{post.head}</p>
       <div className="dugmecom">
         <button className="showcom" onClick={handleShowComments}>
-          <MdOutlineExpandMore />
-          {showComments ? "Sakrij komentare" : "Prikazi komentare"}
+        {showComments ?<FaAngleDown /> :<FaAngleUp/>}
+          {showComments ?"Sakrij komentare" :"Prikazi komentare"}
         </button>
       </div>
       {/* Render comments conditionally */}

@@ -30,7 +30,6 @@ const Kursevi = () => {
         <button className="search-button">Search</button>
       </div>
 
-
         <div className="courses-list">
           {filteredCourses.length > 0 ? (
             filteredCourses.map((course, index) => (

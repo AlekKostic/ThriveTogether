@@ -382,7 +382,7 @@ hr{
 .courses-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
     margin: 20px;
 }
   
@@ -465,9 +465,5 @@ hr{
     word-wrap: break-word; /* Ensure long text wraps properly */
   }
   
-  .reply-card:hover {
-    transform: scale(1.02); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  }
   
 
