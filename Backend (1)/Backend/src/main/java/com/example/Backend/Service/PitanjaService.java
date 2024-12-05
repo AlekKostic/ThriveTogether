@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public class PitanjaService {
     @Autowired
@@ -52,5 +53,11 @@ public class PitanjaService {
 
 
         return pitanjaRepository.save(pitanje);
+    }
+    public ResponseEntity deletePitanja(Long pitanjeid){
+        Pitanja pitanja = pitanjaRepository.findById(pitanjeid).orElseThrow(() -> new RuntimeException("Order not found"));
+        pitanja.setUser(null);
+        pitanjaRepository.deleteById(pitanjeid);
+        return ResponseEntity.ok().build();
     }
 }

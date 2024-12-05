@@ -18,12 +18,16 @@ const Navbar = () => {
   const handleKurseviRedirect = () => {
     navigate('/kursevi');
   };
+  const handleHomeRedirect = () => {
+    navigate('/');
+  };
   console.log(localStorage.getItem('userID'));
   return (
     <nav className="navbar">
       <div className="navbar-left">
         {/*<ul className="sidenav">*/}
         <a href='/'>Home</a>
+        <a id="#NazivSajta" onClick={handleHomeRedirect}>MemoCare</a>
         <a href="#forum" onClick={handleForumRedirect}>Forum</a>
         <a href="#statistika" onClick={handleStatistikaRedirect}>Statistika</a>
         <a href="#kursevi" onClick={handleKurseviRedirect}>Kursevi</a>
