@@ -68,6 +68,7 @@
 }
 
 .usernamee{
+  cursor: pointer;
   font-size:20px;
   align-items:center;
   color: #98988a;
