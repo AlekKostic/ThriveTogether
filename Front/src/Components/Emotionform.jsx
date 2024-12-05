@@ -4,7 +4,7 @@ import { IoMdHappy } from "react-icons/io";
 import { FaRegSadTear } from "react-icons/fa";
 import { MdOutlineSentimentNeutral } from "react-icons/md";
 
-const Emotionform = () => {
+const Emotionform = ({ closeModal }) => {
   const [tekst, setTekst] = useState("");
   const [emotion, setEmotion] = useState(""); // Track the selected emotion
 
@@ -28,7 +28,7 @@ const Emotionform = () => {
   };
 
   return (
-    <div className="sve">
+    <div className="modal-overlay">
       <div className="forum-emo-form">
         <div className="naslov-posta">
           <p>Kako ste se danas osecali?</p>
@@ -82,6 +82,7 @@ const Emotionform = () => {
 
           {/* Submit Button */}
           <div className="post-submit-dugme-div"> 
+            <button type="submit" className="post-cancel-dugme" onClick={closeModal}>Odustani</button>
             <button type="submit" className="post-submit-dugme">Zabelezi</button>
           </div>
         </form>
