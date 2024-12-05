@@ -59,7 +59,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <img src="Front/public/MentalHealthLogo.png" className="llogo" alt="Logo" />
+        <img src="./public/MentalHealthLogo.png" className="llogo" alt="Logo" />
         <a onClick={handleHomeRedirect}>Home</a>
         <a onClick={handleForumRedirect}>Forum</a>
         <a onClick={handleStatistikaRedirect}>Statistika</a>
