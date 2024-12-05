@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./login.css"; // Ensure styles are linked correctly
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const ForumPostForm = ({ closeModal, user_id }) => {
+  const navigate = useNavigate();
+
   const [tekst, setTekst] = useState("");
   const [tekstE, setTekstE] = useState("");
 
@@ -10,13 +13,11 @@ const ForumPostForm = ({ closeModal, user_id }) => {
     e.preventDefault();
 
     let isValid = true;
-    if(!tekst)
-    {
-      setTekstE("Unesite tekst.")
+    if (!tekst) {
+      setTekstE("Unesite tekst.");
       return;
-    }else setTekstE("")
+    } else setTekstE("");
 
-    
     axios({
       method: "post",
       url: "http://localhost:8080/api/pitanja/create",
@@ -27,6 +28,7 @@ const ForumPostForm = ({ closeModal, user_id }) => {
       headers: { "Content-Type": "application/json" },
     })
       .then(function (response) {
+        navigate("/forum");
         console.log(response);
       })
       .catch(function (response) {

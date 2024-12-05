@@ -1,375 +1,379 @@
-html{
-    font-family: 'Times New Roman', Times, serif;
+html {
+  font-family: "Times New Roman", Times, serif;
 }
-.sve{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+.sve {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .forma {
-    background-color: #8eac9f;
-    padding: 2rem 3rem;
-    border-radius: 12px;
-    text-align: center;
-    box-sizing: border-box;
-    width: 350px;
-    max-width: 90%; 
-    margin: 0 auto;
+  background-color: #8eac9f;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 350px;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .naslovforme {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    color: white;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: white;
 }
 
-.input-polja, .input-post {
-    background-color: #4d7c71;
-    color:white;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    padding: 15px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    text-align: left;
-    vertical-align: top;
+.input-polja,
+.input-post {
+  background-color: #4d7c71;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  text-align: left;
+  vertical-align: top;
 }
-.input-polja::placeholder{
-    color:white;
+.input-polja::placeholder {
+  color: white;
 }
 
 .submit-login {
-    margin-top: 0.5rem;
-    height: 40px;
-    width: 100px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: #d6d0c5;
-    transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #d6d0c5;
+  transition: background-color 0.3s ease;
 }
 
 .submit-login:hover {
-    background-color: #c7c1b5;
+  background-color: #c7c1b5;
 }
 
 .login-error {
-    color: rgb(162, 58, 58);;
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    margin-top: 5px;
-    text-align: center;
+  color: rgb(162, 58, 58);
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 5px;
+  text-align: center;
 }
 
-.forum-post-form, .forum-emo-form {
-    background-color: #81acbe;
-    padding: 2rem 3rem;
-    border-radius: 12px;
-    text-align: center;
-    box-sizing: border-box;
-    
-    max-width: 90%; /* Ensures responsiveness */
-    margin: 0 auto;
+.forum-post-form,
+.forum-emo-form {
+  background-color: #81acbe;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-sizing: border-box;
+
+  max-width: 90%; /* Ensures responsiveness */
+  margin: 0 auto;
 }
 
-.forum-post-form{
-    width: 700px;
-    z-index:1;
+.forum-post-form {
+  width: 700px;
+  z-index: 1;
 }
-.forum-emo-form{
-    width: 500px;
-}
-
-.input-post, .input-post-emo {
-    background-color: #33617c;
-    color:white;
-    width: 100%;
-    position: relative;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 10px;
-    border: none;
-    vertical-align: top;
-    text-align: left;
-}
-.input-post-emo::placeholder{
-    color:rgba(255,255,255,0.6);
+.forum-emo-form {
+  width: 500px;
 }
 
-.input-post{
-    
-    height: 400px;
+.input-post,
+.input-post-emo {
+  background-color: #33617c;
+  color: white;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  vertical-align: top;
+  text-align: left;
+}
+.input-post-emo::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.input-post-emo{
-    
-    height: 250px;
+.input-post {
+  height: 400px;
+}
+
+.input-post-emo {
+  height: 250px;
 }
 
 .input-post::placeholder {
-    text-align: left;
-    left: 15px;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.6);
+  text-align: left;
+  left: 15px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .naslov-posta {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    color: white;
-    text-align: left;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: left;
 }
 
 .post-submit-dugme-div {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0;
 }
 
-.post-submit-dugme, .post-cancel-dugme {
-    margin-top: 10px;
-    width: 100px;
-    height: 30px;
-    margin-left:10px;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:17px;
+.post-submit-dugme,
+.post-cancel-dugme {
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+  margin-left: 10px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
 }
-.logout-dugme{
-    background-color:rgb(162, 78, 78);
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:17px;
-    border:none;
-    border-radius:8px;
-    padding:5px 20px;
-    transition: 0.3s background-color ease;
+.logout-dugme {
+  background-color: rgb(162, 78, 78);
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 20px;
+  transition: 0.3s background-color ease;
 }
-.llogo{
-    height:20px;
-    width:20px;
+.llogo {
+  height: 20px;
+  width: 20px;
 }
-.logout-dugme:hover{
-    background-color: rgb(137, 66, 66);
+.logout-dugme:hover {
+  background-color: rgb(137, 66, 66);
 }
-.post-submit-dugme{
-    padding: 20px;
-    background-color: #4CAF50;
+.post-submit-dugme {
+  padding: 20px;
+  background-color: #4caf50;
 }
-.post-cancel-dugme{
-    padding: 20px;
-    background-color: rgb(162, 58, 58);
+.post-cancel-dugme {
+  padding: 20px;
+  background-color: rgb(162, 58, 58);
 }
 
 .post-submit-dugme:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 .post-cancel-dugme:hover {
-    background-color: rgb(162, 78, 78);
+  background-color: rgb(162, 78, 78);
 }
 
 @media (max-width: 768px) {
-    .forma {
-        width: 90%;
-        padding: 1.5rem;
-    }
+  .forma {
+    width: 90%;
+    padding: 1.5rem;
+  }
 
-    .forum-post-form {
-        width: 90%;
-        padding: 1.5rem;
-    }
+  .forum-post-form {
+    width: 90%;
+    padding: 1.5rem;
+  }
 
-    .input-post {
-        height: 300px;
-    }
+  .input-post {
+    height: 300px;
+  }
 
-    .post-submit-dugme {
-        width: 90px;
-    }
+  .post-submit-dugme {
+    width: 90px;
+  }
 }
 
 @media (max-width: 480px) {
-    .forma {
-        width: 95%;
-        padding: 1rem;
-    }
+  .forma {
+    width: 95%;
+    padding: 1rem;
+  }
 
-    .forum-post-form {
-        width: 95%;
-        padding: 1rem;
-    }
+  .forum-post-form {
+    width: 95%;
+    padding: 1rem;
+  }
 
-    .input-post {
-        height: 200px;
-    }
+  .input-post {
+    height: 200px;
+  }
 
-    .post-submit-dugme {
-        width: 80px;
-        height: 35px;
-    }
+  .post-submit-dugme {
+    width: 80px;
+    height: 35px;
+  }
 }
 
-.log-upit{
-    margin-top:10px;
-    font-size:17px;
-    color: white
+.log-upit {
+  margin-top: 10px;
+  font-size: 17px;
+  color: white;
 }
 
-a{
-    color: #18445b;
-    text-decoration: underline;
-    cursor: pointer;
+a {
+  color: #18445b;
+  text-decoration: underline;
+  cursor: pointer;
 }
-.emotion-selection{
-    margin-top: 0px;
-    margin-bottom: 15px;
-    color: white;
-    font-size:20px;
-    align-items: left;
+.emotion-selection {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 20px;
+  align-items: left;
 }
-.dugme{
-    margin-right:15px;
-    display: inline-flex;
-    align-items: center;
-}
-
-hr{
-    margin-bottom: 10px;
+.dugme {
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
 }
 
-.post{
-    background-color:#8fac9f;
-    border:none;
-    border-radius: 10px;
-    width:700px;
-    padding: 10px;
-    margin-bottom:20px;
-    margin-left:10px;
+hr {
+  margin-bottom: 10px;
 }
 
-.post-user{
-    font-size: 25px;
-    color: white;
-    margin-bottom:10px;
-    padding:10px;
+.post {
+  background-color: #8fac9f;
+  border: none;
+  border-radius: 10px;
+  width: 700px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
-.post-text{
-    background-color: #4d7c71;
-    border-radius: 8px;
-    padding:15px;
-    font-size: 20px;
-    color:white;
-    text-align: left;
-
+.post-user {
+  font-size: 25px;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
-.dugmecom{
-    display: flex;
-    justify-content: flex-end;
+.post-text {
+  background-color: #4d7c71;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  text-align: left;
 }
-.befr{
-    color: #e0e7d9;
-    padding: 5px;
+
+.dugmecom {
+  display: flex;
+  justify-content: flex-end;
 }
-.mali-footer{
-    vertical-align: top;
+.befr {
+  color: #e0e7d9;
+  padding: 5px;
+}
+.mali-footer {
+  vertical-align: top;
 }
 .input-com {
-    display: flex; /* Allows flexible alignment */
-    justify-content: flex-start; /* Aligns content to the left */
-    margin-bottom: 10px; /* Adds space between the input and buttons */
-    width: 100%; /* Optional: Ensures input spans container width */
+  display: flex; /* Allows flexible alignment */
+  justify-content: flex-start; /* Aligns content to the left */
+  margin-bottom: 10px; /* Adds space between the input and buttons */
+  width: 100%; /* Optional: Ensures input spans container width */
 }
 
 .input-com input {
-    width: 50%; /* Adjust as needed */
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
+  width: 50%; /* Adjust as needed */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
-
-.showcom, .showcom2 {
-    background-color: #e0e7d9;
-    color: #4d7c71;
-    padding: 5px 10px; /* Consistent padding */
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 15px;
-    border-radius: 10px;
-    border: none; /* No borders */
-    cursor: pointer;
-    display: inline-flex; /* Ensures consistent alignment */
-    align-items: center; /* Centers text vertically */
-    justify-content: center; /* Centers text horizontally */
-    transition: background-color 0.3s;
+.showcom,
+.showcom2 {
+  background-color: #e0e7d9;
+  color: #4d7c71;
+  padding: 5px 10px; /* Consistent padding */
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none; /* No borders */
+  cursor: pointer;
+  display: inline-flex; /* Ensures consistent alignment */
+  align-items: center; /* Centers text vertically */
+  justify-content: center; /* Centers text horizontally */
+  transition: background-color 0.3s;
 }
 
-.showcom2{
-    float:left;
+.showcom2 {
+  float: left;
 }
 .showcom:hover {
-    background-color: #c5cbbf;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: #c5cbbf;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
-.forum-container, .kursevi-container, .statistika-container {
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Ensure the container spans the full viewport height */
+.forum-container,
+.kursevi-container,
+.statistika-container {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure the container spans the full viewport height */
 }
 
 .footer {
-    background-color: #f4f4f4;
-    text-align: center;
-    left:0;
-    bottom:0;
-    width: 100%;
+  background-color: #f4f4f4;
+  position: fixed;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
-.postavi-objavi{
-    margin:30px;
+.postavi-objavi {
+  margin: 30px;
 }
-.postavi-objavi2{
-    margin:auto;
+.postavi-objavi2 {
+  margin: auto;
 }
 
 .postt {
-    height: 50px;
-    width: 200px;
-    padding: 10px 15px; /* Added more padding for a better look */
-    text-align: center; /* Center text horizontally */
-    font-size: 20px; 
-    background-color: #9dbcb0;
-    color: white; 
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    cursor: pointer;
-    transition: all 0.3s ease; 
-    font-family: 'Times New Roman', Times, serif;
+  height: 50px;
+  width: 200px;
+  padding: 10px 15px; /* Added more padding for a better look */
+  text-align: center; /* Center text horizontally */
+  font-size: 20px;
+  background-color: #9dbcb0;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .postt:hover {
-    background-color: #5c8978; 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+  background-color: #5c8978;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 .modal-overlay {
   position: fixed; /* Ensures modal is fixed at the top */
@@ -386,252 +390,246 @@ hr{
 
 /* Styling the search container to center the search input */
 .search-container {
-    
-    margin-top:20px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 /* Styling the search input field */
 .search-input {
-    width: 250px; /* Set width to a moderate value */
-    padding: 10px 20px; /* Padding for the input */
-    font-size: 1rem; /* Font size for text */
-    border-radius: 25px; /* Rounded corners */
-    border: 2px solid #ddd; /* Light border */
-    background-color: #f9f9f9; /* Light background */
+  width: 250px; /* Set width to a moderate value */
+  padding: 10px 20px; /* Padding for the input */
+  font-size: 1rem; /* Font size for text */
+  border-radius: 25px; /* Rounded corners */
+  border: 2px solid #ddd; /* Light border */
+  background-color: #f9f9f9; /* Light background */
 }
-
 
 /* Styling the search button */
 .search-button {
-    padding: 10px 20px;
-    background-color: #457d99; /* Blue background */
-    color: white; /* White text */
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: 0.3s background-color ease;
+  padding: 10px 20px;
+  background-color: #457d99; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s background-color ease;
 }
 
 /* On hover, change background color of the search button */
 .search-button:hover {
-    background-color: rgb(69, 153, 195); /* Darker blue background on hover */
+  background-color: rgb(69, 153, 195); /* Darker blue background on hover */
 }
 
 /* Ensure search bar layout is good across all devices */
 @media (max-width: 768px) {
-    .search-input {
-        width: 200px; /* Adjust width for smaller screens */
-    }
+  .search-input {
+    width: 200px; /* Adjust width for smaller screens */
+  }
 
-    .search-button {
-        padding: 8px 16px; /* Adjust button size */
-    }
+  .search-button {
+    padding: 8px 16px; /* Adjust button size */
+  }
 }
 
 @media (max-width: 480px) {
-    .search-input {
-        width: 150px; /* Smaller width on very small screens */
-    }
+  .search-input {
+    width: 150px; /* Smaller width on very small screens */
+  }
 
-    .search-button {
-        padding: 6px 12px; /* Adjust button size */
-    }
+  .search-button {
+    padding: 6px 12px; /* Adjust button size */
+  }
 }
-
 
 .courses-list {
-    padding-left:10px;
-    padding-bottom: 30px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+  padding-left: 10px;
+  padding-bottom: 30px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
 }
-  
-  /* Style the individual course card */
+
+/* Style the individual course card */
+.course-item {
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Title Style inside course card */
+.course-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+  height: 80px;
+  font-weight: bold;
+}
+
+/* Description Style inside course card */
+.course-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  height: 70px; /* Limit description height */
+  overflow: hidden;
+}
+
+/* Link Styling inside course card */
+.course-item a {
+  color: #457d99;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.course-item a:hover {
+  text-decoration: underline;
+  color: #389cce;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
   .course-item {
-    background-color: #f4f4f4;
-    border-radius: 12px;
-    padding: 20px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    padding: 15px;
   }
-  
-  .course-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Title Style inside course card */
-  .course-title {
-    font-size: 1.4rem;
-    color: #333;
-    margin-bottom: 10px;
-    height: 80px;
-    font-weight: bold;
-  }
-  
-  /* Description Style inside course card */
-  .course-item p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
-    height: 70px; /* Limit description height */
-    overflow: hidden;
-  }
-  
-  /* Link Styling inside course card */
-  .course-item a {
-    color: #457d99;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .course-item a:hover {
-    text-decoration: underline;
-    color: #389cce;
-  }
-  
-  /* Responsiveness for smaller screens */
-  @media (max-width: 768px) {
-    .course-item {
-      width: 100%;
-      padding: 15px;
-    }
-  }
-  
+}
 
 /* Reply card container */
 .reply-card {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.1);/* Light gray background */
-    border: 1px solid #ddd;   /* Subtle border */
-    border-radius: 8px;       /* Rounded corners */
-    padding: 12px 16px;       /* Padding for content */
-    margin-bottom: 10px;      /* Spacing between replies */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    text-align:left;    
-  }
-  
-  .reply-text {
-    font-size: 18px;
-    color: white; /* Dark text for readability */
-    line-height: 1.6;
-    word-wrap: break-word; /* Ensure long text wraps properly */
-  }
-  
-  
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.1); /* Light gray background */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 16px; /* Padding for content */
+  margin-bottom: 10px; /* Spacing between replies */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.reply-text {
+  font-size: 18px;
+  color: white; /* Dark text for readability */
+  line-height: 1.6;
+  word-wrap: break-word; /* Ensure long text wraps properly */
+}
+
 .forumm {
-    justify-content: center; /* Centers horizontally */
-    align-items: center;    /* Centers vertically */
-    height: 100vh;          /* Ensures full viewport height */
-    margin: 0;
-    text-align: center;     /* Optional, for text alignment */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Ensures full viewport height */
+  margin: 0;
+  text-align: center; /* Optional, for text alignment */
 }
 
-.postovi{
-    margin-top:30px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding-bottom:50px;
+.postovi {
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-bottom: 50px;
 }
 
-.gase{
-    text-align: right;
-    padding:0;
-    margin:0;
-    font-size:30px;
-    color:white;
-    cursor: pointer;
+.gase {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }
 /* Apply a background to the div wrapping the content */
 .page-background {
-    background-image: url('blurr.jpg');  /* Add your image URL here */
-    background-size: cover;  /* Ensures the background covers the entire div */
-    background-position: center;  /* Centers the background image */
-    height: 100vh;  /* Ensures the div takes up the full height of the viewport */
-    width: 100vw; 
-    overflow:hidden 
-  }
+  background-image: url("blurr.jpg"); /* Add your image URL here */
+  background-size: cover; /* Ensures the background covers the entire div */
+  background-position: center; /* Centers the background image */
+  height: 100vh; /* Ensures the div takes up the full height of the viewport */
+  width: 100vw;
+  overflow: hidden;
+}
 
-  /* Dropdown menu container */
+/* Dropdown menu container */
 .dropdown-menu {
-    position: absolute;
-    top: 40px;  /* Position below the username */
-    right: 20px;
-    background-color: white;
-    color: black;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    display: none;  /* Initially hidden */
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, top 0.3s ease;
-  }
-  
-  /* Display dropdown when active */
-  .dropdown-menu.show {
-    display: block;
-    opacity: 1;
-    pointer-events: all;
-    top: 40px;  /* Position directly below the username */
-  }
-  
-  /* Individual dropdown item styling */
-  .dropdown-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  /* Last item in dropdown without a border */
-  .dropdown-item:last-child {
-    border-bottom: none;
-  }
-  
-  /* Hover effect on dropdown items */
-  .dropdown-item:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Input field inside dropdown */
-  .dropdown-item input {
-    width: calc(100% - 20px);
-    padding: 5px;
-    margin: 10px 0;
-    margin-bottom:0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Button inside dropdown */
-  .dropdown-item button {
-    padding: 8px 12px;
-    background-color: #8fac9f;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  /* Hover effect for button inside dropdown */
-  .dropdown-item button:hover {
-    background-color: rgb(97, 170, 101);
-  }
-  
+  position: absolute;
+  top: 40px; /* Position below the username */
+  right: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  display: none; /* Initially hidden */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+/* Display dropdown when active */
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+  top: 40px; /* Position directly below the username */
+}
+
+/* Individual dropdown item styling */
+.dropdown-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Last item in dropdown without a border */
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect on dropdown items */
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Input field inside dropdown */
+.dropdown-item input {
+  width: calc(100% - 20px);
+  padding: 5px;
+  margin: 10px 0;
+  margin-bottom: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button inside dropdown */
+.dropdown-item button {
+  padding: 8px 12px;
+  background-color: #8fac9f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Hover effect for button inside dropdown */
+.dropdown-item button:hover {
+  background-color: rgb(97, 170, 101);
+}
