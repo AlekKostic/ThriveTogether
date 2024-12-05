@@ -1,20 +1,28 @@
 import React, { useState } from "react";
 import "./login.css"; // Ensure styles are linked correctly
+import axios from "axios";
 
-const ForumPostForm = ({ closeModal }) => {
+const ForumPostForm = ({ closeModal, user_id }) => {
   const [tekst, setTekst] = useState("");
   const [tekstE, setTekstE] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Tekst:", tekst);
-
-    if (!tekst) {
-      setTekstE("Unesite sadrzaj.");
-    } else {
-      setTekstE("");
-      closeModal(); // Close modal after submission (optional)
-    }
+    axios({
+      method: "post",
+      url: "http://localhost:8080/api/pitanja/create",
+      data: {
+        head: tekst,
+        userId: user_id,
+      },
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (response) {
+        console.log(response);
+      });
   };
 
   return (

@@ -1,47 +1,26 @@
 import React, { useState } from "react";
 import { MdOutlineExpandMore } from "react-icons/md";
 import Reply from "./Reply";
+import axios from "axios";
 
 const ForumPost = ({ post }) => {
-  const [odg, setOdg] = useState([
-    {
-      id_odgovora: 2,
-      odgovor: "test2",
-      pitanja: {
-        id_pitanja: 1,
-        head: "test",
-        user: {
-          id: 6,
-          ime: "test",
-          prezime: "prezime",
-          email: "test@test.com",
-          password: "jeuju",
-          username: "test"
-        }
-      }
-    },
-    {
-      id_odgovora: 3,
-      odgovor: "test3",
-      pitanja: {
-        id_pitanja: 1,
-        head: "test",
-        user: {
-          id: 6,
-          ime: "test",
-          prezime: "prezime",
-          email: "test@test.com",
-          password: "jeuju",
-          username: "test"
-        }
-      }
-    }
-  ]);
+  const [odg, setOdg] = useState([]);
 
   const [showComments, setShowComments] = useState(false);
 
   const handleShowComments = () => {
-    setShowComments(!showComments); // Toggle the visibility of comments
+    setShowComments(!showComments);
+    axios({
+      method: "get",
+      url: `http://localhost:8080/api/odgovori/${post.id_pitanja}`,
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(function (response) {
+        setOdg(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (
