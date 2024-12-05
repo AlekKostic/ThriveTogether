@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "./uredjivanje.css"
 import { useNavigate } from 'react-router-dom'; // Importujte useNavigate
+import Hero from "./Hero";
 /*
 const posts = [
   { user: 'Svetlana', text: 'Mazem venogel i to mi pomaze.' },
@@ -22,9 +23,7 @@ const Component = () => {
       <h1>Mentalno Zdravlje</h1>
     </header>*/}
     <Navbar />
-    <div className="hero-section">
-      <div className="Hero"></div>
-    </div>
+    <Hero />
     <article className="Mentalno-zdravlje">
     <div className="bold-text">Tekst1</div>
       <div className="text-section">
