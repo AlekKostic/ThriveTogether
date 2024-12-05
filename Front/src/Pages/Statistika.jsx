@@ -107,55 +107,50 @@ const Statistika = () => {
         <div className="hero-section">
           <div className="Hero4"></div>
         </div>
-
         <div className="postavi-objavi2">
           <button className="postt" onClick={addPost}>
             + Dodaj osecanje
           </button>
         </div>
-
         {isModalOpen && <Emotionform closeModal={closeModal} />}
-
         <div className="quote-section">
           <p className="quote">
             {quotes[Math.floor(Math.random() * quotes.length)]}
           </p>
         </div>
-
-        {parseInt(localStorage.getItem("userID") != -1) && (
-          <div className="emotion-chart">
-            <Bar
-              data={chartData}
-              options={{
-                responsive: true,
-                plugins: {
+        <div className="emotion-chart">
+          <Bar
+            data={chartData}
+            options={{
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  text: "Emotions Overview",
+                  font: { size: 20 },
+                },
+                tooltip: {
+                  backgroundColor: "rgba(0, 0, 0, 0.7)",
+                },
+              },
+              scales: {
+                x: {
                   title: {
                     display: true,
-                    text: "Emotions Overview",
-                    font: { size: 20 },
-                  },
-                  tooltip: {
-                    backgroundColor: "rgba(0, 0, 0, 0.7)",
+                    text: "Emotions",
                   },
                 },
-                scales: {
-                  x: {
-                    title: {
-                      display: true,
-                      text: "Emotions",
-                    },
-                  },
-                  y: {
-                    title: {
-                      display: true,
-                      text: "Count",
-                    },
+                y: {
+                  title: {
+                    display: true,
+                    text: "Count",
                   },
                 },
-              }}
-            />
-          </div>
-        )}
+              },
+            }}
+          />
+        </div>
+        )
       </div>
     </div>
   );

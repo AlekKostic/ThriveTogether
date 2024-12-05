@@ -66,7 +66,7 @@ const Forum = () => {
         )}
         <div className="postovi">
           <div>
-            {posts.map((post) => (
+            {[...posts].reverse().map((post) => (
               <ForumPost key={post.id_pitanja} post={post} />
             ))}
           </div>

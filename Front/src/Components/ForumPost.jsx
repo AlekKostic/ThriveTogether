@@ -27,7 +27,11 @@ const ForumPost = ({ post }) => {
   };
 
   const handleNew = () => {
-    setShowComments(true);
+    if (!novio.trim()) {
+      console.log("Comment is empty!");
+      return; // Prevent posting an empty comment
+    }
+
     axios({
       method: "post",
       url: "http://localhost:8080/api/odgovori/create",
@@ -39,9 +43,17 @@ const ForumPost = ({ post }) => {
     })
       .then(function (response) {
         console.log(response);
+
+        const newComment = {
+          id_odgovora: response.data.id_odgovora,
+          odgovor: novio,
+        };
+        setOdg((prevOdg) => [newComment, ...prevOdg]);
+        setnovio("");
+        setShowComments(true);
       })
-      .catch(function (response) {
-        console.log(response);
+      .catch(function (error) {
+        console.log(error);
       });
   };
 
