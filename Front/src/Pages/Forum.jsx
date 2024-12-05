@@ -7,32 +7,7 @@ import { CiCirclePlus } from "react-icons/ci";
 import ForumPostForm from "../Components/ForumPostForm"; // Import the popup form
 
 const Forum = () => {
-  const [posts, setPosts] = useState([
-    {
-      id_pitanja: 1,
-      head: "test",
-      user: {
-        id: 6,
-        ime: "test",
-        prezime: "prezime",
-        email: "test@test.com",
-        password: "jeuju",
-        username: "test",
-      },
-    },
-    {
-      id_pitanja: 5,
-      head: "test3",
-      user: {
-        id: 4,
-        ime: "Aleksandar",
-        prezime: "Kostic",
-        email: "kostic.aleksandar006@gmail.com",
-        password: "test1234",
-        username: "alek",
-      },
-    },
-  ]);
+  const [posts, setPosts] = useState([]);
 
   const [isModalOpen, setModalOpen] = useState(false); // State to control popup visibility
 
@@ -66,11 +41,13 @@ const Forum = () => {
       <h2>Mentalno zdravlje</h2>
       <p>Pitanja i odgovori koje ljudi postavljaju</p>
       <div className="postavi-objavi">
-        <button className="postt" onClick={addPost}>+ Postavi objavu</button>
+        <button className="postt" onClick={addPost}>
+          + Postavi objavu
+        </button>
       </div>
 
       {/* Render the ForumPostForm if the modal is open */}
-      {isModalOpen && <ForumPostForm closeModal={closeModal} />}
+      {isModalOpen && <ForumPostForm closeModal={closeModal} user_id={4} />}
 
       {posts.map((post) => (
         <ForumPost key={post.id_pitanja} post={post} />

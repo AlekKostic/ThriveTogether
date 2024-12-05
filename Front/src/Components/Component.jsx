@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "./uredjivanje.css"
 import { useNavigate } from 'react-router-dom'; // Importujte useNavigate
+import Hero from "./Hero";
 /*
 const posts = [
   { user: 'Svetlana', text: 'Mazem venogel i to mi pomaze.' },
@@ -22,14 +23,27 @@ const Component = () => {
       <h1>Mentalno Zdravlje</h1>
     </header>*/}
     <Navbar />
-    <div className="Hero">
-        <div className="Hero-content">
-            <h1>Uvod U Mentalno Zdravlje</h1>
-            <p>O mentalnom zdravlju</p>
-        </div>
-    </div>
-    <div className="Mentalno-zdravlje">
-      <h1>a</h1>
+    <Hero />
+    <article className="Mentalno-zdravlje">
+    <div className="bold-text">Tekst1</div>
+      <div className="text-section">
+        <div className="text-box">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          Assumenda eum explicabo velit, perferendis enim sit dolores! 
+          Molestiae voluptatum nesciunt, laudantium suscipit similique 
+          asperiores doloribus magni quis aperiam, incidunt aut excepturi!
+          </div>
+        <div className="text-box">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          Assumenda eum explicabo velit, perferendis enim sit dolores! 
+          Molestiae voluptatum nesciunt, laudantium suscipit similique 
+          asperiores doloribus magni quis aperiam, incidunt aut excepturi!</div>
+        <div className="text-box">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          Assumenda eum explicabo velit, perferendis enim sit dolores! 
+          Molestiae voluptatum nesciunt, laudantium suscipit similique 
+          asperiores doloribus magni quis aperiam, incidunt aut excepturi!</div>
+      </div>
         {/*{posts.map((post, index) => (
           <div className="post" key={index}>
             <h3>{post.user}</h3>
@@ -38,7 +52,7 @@ const Component = () => {
           </div>
         ))}
           */}
-      </div>
+      </article>
     <Footer />
   </div>
   )

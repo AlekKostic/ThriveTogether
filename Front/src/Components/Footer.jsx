@@ -10,9 +10,6 @@ const Footer = () => {
         <div className="foot-right">
             <a href="#Kontakt">Kontakt</a>
         </div>
-        <div className='Home-button'>
-            <a href='/'>Home</a>
-        </div>
       </nav>
     </footer>
   )
